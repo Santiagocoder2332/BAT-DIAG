@@ -1,0 +1,1403 @@
+/* =========================================================
+   BAT-DIAG
+   REGISTROS.CSS
+========================================================= */
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.record-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    min-height: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CABECERA
+========================================================= */
+
+.record-header {
+
+    min-height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5px;
+}
+
+
+.record-header h2 {
+
+    margin: 0 0 4px;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: #172033;
+}
+
+
+.record-header p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.3;
+
+    color: #6f7c8e;
+}
+
+
+/* =========================================================
+   BOTÓN EXPORTAR REPORTE
+========================================================= */
+
+.export-all-btn {
+
+    height: 40px;
+
+    padding: 0 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #176dcc;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px
+        rgba(23, 109, 204, .20);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+}
+
+
+.export-all-btn:hover {
+
+    background: #1261b9;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 6px 14px
+        rgba(23, 109, 204, .27);
+}
+
+
+.export-all-btn span {
+
+    font-size: 15px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   RESUMEN
+========================================================= */
+
+.record-summary {
+
+    height: 72px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+.record-summary-card {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 10px 16px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, .045);
+}
+
+
+/* =========================================================
+   ICONOS
+========================================================= */
+
+.record-summary-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.record-summary-icon.blue {
+
+    color: #176dcc;
+
+    background:
+        rgba(23, 109, 204, .10);
+}
+
+
+.record-summary-icon.green {
+
+    color: #159d42;
+
+    background:
+        rgba(21, 157, 66, .10);
+}
+
+
+.record-summary-icon.orange {
+
+    color: #e99508;
+
+    background:
+        rgba(233, 149, 8, .10);
+}
+
+
+.record-summary-icon.purple {
+
+    color: #7049c5;
+
+    background:
+        rgba(112, 73, 197, .10);
+}
+
+
+.record-summary-card small {
+
+    display: block;
+
+    font-size: 10px;
+
+    line-height: 1.2;
+
+    color: #778497;
+}
+
+
+.record-summary-card strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: #172033;
+}
+
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.filters-panel {
+
+    min-height: 76px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        1fr
+        1fr
+        1.35fr
+        auto;
+
+    align-items: end;
+
+    gap: 12px;
+
+    padding: 11px 16px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, .045);
+}
+
+
+.filter-title {
+
+    align-self: center;
+}
+
+
+.filter-title strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    line-height: 1.1;
+
+    color: #263142;
+}
+
+
+.filter-title small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    line-height: 1.2;
+
+    color: #7a8798;
+}
+
+
+/* =========================================================
+   CONTROLES
+========================================================= */
+
+.filter-control label,
+.search-control label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    color: #687588;
+}
+
+
+.filter-control select {
+
+    width: 100%;
+
+    height: 34px;
+
+    padding: 0 10px;
+
+    border:
+        1px solid #d4dee7;
+
+    border-radius: 7px;
+
+    background: #f9fafc;
+
+    color: #263142;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.filter-control select:focus {
+
+    border-color: #159da9;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   BUSCADOR
+========================================================= */
+
+.search-box {
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 10px;
+
+    background: #f9fafc;
+
+    border:
+        1px solid #d4dee7;
+
+    border-radius: 7px;
+}
+
+
+.search-box span {
+
+    font-size: 12px;
+
+    opacity: .65;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #263142;
+
+    font-family: inherit;
+
+    font-size: 11px;
+}
+
+
+.search-box input::placeholder {
+
+    color: #9aa5b4;
+}
+
+
+/* =========================================================
+   BOTÓN BUSCAR
+========================================================= */
+
+.filter-btn {
+
+    height: 34px;
+
+    min-width: 90px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #172f58;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .18s ease;
+}
+
+
+.filter-btn:hover {
+
+    background: #214274;
+}
+
+
+/* =========================================================
+   PANEL HISTORIAL
+========================================================= */
+
+.record-table-panel {
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, .045);
+}
+
+
+/* =========================================================
+   ENCABEZADO TABLA
+========================================================= */
+
+.table-heading {
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 16px;
+
+    border-bottom:
+        1px solid #e1e7ed;
+}
+
+
+.table-heading h3 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.1;
+
+    color: #263142;
+}
+
+
+.table-heading span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    color: #7a8797;
+}
+
+
+.storage-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 10px;
+
+    color: #5f6d7f;
+}
+
+
+.storage-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #18ad4c;
+}
+
+
+/* =========================================================
+   TABLA
+========================================================= */
+
+.table-wrapper {
+
+    flex: 1;
+
+    min-height: 0;
+
+    overflow: hidden;
+}
+
+
+.record-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+.record-table th {
+
+    height: 36px;
+
+    padding: 0 12px;
+
+    text-align: left;
+
+    background: #f3f6f9;
+
+    border-bottom:
+        1px solid #d8e1e9;
+
+    color: #536174;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.record-table td {
+
+    height: 43px;
+
+    padding: 6px 12px;
+
+    border-bottom:
+        1px solid #edf0f3;
+
+    color: #344154;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   FILAS
+========================================================= */
+
+.record-table tbody tr {
+
+    transition:
+        background .15s ease;
+}
+
+
+.record-table tbody tr:hover {
+
+    background: #f8fbfd;
+}
+
+
+.record-table tbody tr.selected-row {
+
+    background:
+        rgba(20, 169, 159, .055);
+}
+
+
+.record-table tbody tr.selected-row td:first-child {
+
+    border-left:
+        3px solid #15aaa0;
+}
+
+
+/* =========================================================
+   FECHA
+========================================================= */
+
+.record-table td strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color: #263142;
+}
+
+
+.record-table td small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    color: #8792a1;
+}
+
+
+/* =========================================================
+   ARCHIVO
+========================================================= */
+
+.file-name {
+
+    display: block;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #176dcc;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   BATERÍA
+========================================================= */
+
+.battery-tag {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: #eef4fb;
+
+    color: #176dcc;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ESTADOS
+========================================================= */
+
+.status {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.status.good {
+
+    color: #159d42;
+}
+
+
+.status.moderate {
+
+    color: #e99508;
+}
+
+
+.status.alert {
+
+    color: #e43e48;
+}
+
+
+/* =========================================================
+   ACCIONES
+========================================================= */
+
+.action-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.action-btn {
+
+    width: 31px;
+
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #d7e0e8;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        transform .15s ease,
+        background .15s ease,
+        border-color .15s ease;
+}
+
+
+.action-btn:hover {
+
+    transform:
+        translateY(-1px);
+
+    background: #f4f8fb;
+}
+
+
+.action-btn.view {
+
+    color: #176dcc;
+}
+
+
+.action-btn.analyze {
+
+    color: #7049c5;
+}
+
+
+.action-btn.export {
+
+    color: #159d42;
+}
+
+
+/* =========================================================
+   PIE DE TABLA
+========================================================= */
+
+.table-footer {
+
+    height: 39px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 16px;
+
+    border-top:
+        1px solid #e1e7ed;
+}
+
+
+.table-footer > span {
+
+    font-size: 10px;
+
+    color: #7b8796;
+}
+
+
+.pagination {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.pagination button {
+
+    width: 27px;
+
+    height: 27px;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #617084;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease;
+}
+
+
+.pagination button:hover {
+
+    background: #f2f6f9;
+}
+
+
+.pagination button.page-active {
+
+    background: #176dcc;
+
+    border-color: #176dcc;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PRUEBA SELECCIONADA
+========================================================= */
+
+.selected-record {
+
+    min-height: 76px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 10px 16px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, .045);
+}
+
+
+/* =========================================================
+   INFORMACIÓN ARCHIVO
+========================================================= */
+
+.selected-record-main {
+
+    min-width: 290px;
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.selected-file-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        rgba(23, 109, 204, .10);
+
+    color: #176dcc;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.selected-record-info > span {
+
+    display: block;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    color: #159da9;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+
+.selected-record-info h3 {
+
+    margin: 5px 0 0;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    color: #263142;
+}
+
+
+.selected-record-info p {
+
+    margin: 5px 0 0;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    color: #7b8796;
+}
+
+
+/* =========================================================
+   MÉTRICAS
+========================================================= */
+
+.selected-metrics {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.selected-metrics > div {
+
+    min-width: 75px;
+}
+
+
+.selected-metrics small {
+
+    display: block;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    color: #7c8999;
+}
+
+
+.selected-metrics strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    color: #176dcc;
+}
+
+
+.selected-metrics .metric-good {
+
+    color: #159d42;
+}
+
+
+/* =========================================================
+   ACCIONES INFERIORES
+========================================================= */
+
+.selected-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.secondary-btn,
+.primary-export-btn {
+
+    height: 36px;
+
+    padding: 0 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+.secondary-btn {
+
+    border:
+        1px solid #d6e0e8;
+
+    background: #ffffff;
+
+    color: #536174;
+}
+
+
+.secondary-btn:hover {
+
+    background:
+        #f5f8fa;
+}
+
+
+.primary-export-btn {
+
+    border: none;
+
+    background: #159d42;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 4px 9px
+        rgba(21, 157, 66, .18);
+
+    transition:
+        background .18s ease,
+        transform .18s ease;
+}
+
+
+.primary-export-btn:hover {
+
+    background: #128d3a;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   PANTALLAS GRANDES
+========================================================= */
+
+@media (min-width: 1600px) {
+
+    .record-header h2 {
+        font-size: 27px;
+    }
+
+    .record-header p {
+        font-size: 13px;
+    }
+
+    .record-summary-card small {
+        font-size: 11px;
+    }
+
+    .record-summary-card strong {
+        font-size: 19px;
+    }
+
+    .record-table th {
+        font-size: 11px;
+    }
+
+    .record-table td {
+        font-size: 12px;
+    }
+
+    .file-name {
+        font-size: 12px;
+    }
+
+    .selected-record-info h3 {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   PANTALLAS MEDIANAS
+========================================================= */
+
+@media (max-width: 1250px) {
+
+    .filters-panel {
+
+        grid-template-columns:
+            1fr
+            1fr
+            1fr
+            1.25fr
+            auto;
+
+        gap: 9px;
+    }
+
+
+    .selected-metrics {
+
+        gap: 16px;
+    }
+
+
+    .selected-actions {
+
+        gap: 5px;
+    }
+
+
+    .secondary-btn,
+    .primary-export-btn {
+
+        padding: 0 10px;
+    }
+
+}
+
+
+/* =========================================================
+   PANTALLAS PEQUEÑAS
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .record-content {
+
+        overflow-y: auto;
+    }
+
+
+    .record-summary {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        height: 150px;
+    }
+
+
+    .filters-panel {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        height: auto;
+    }
+
+
+    .record-table-panel {
+
+        min-height: 450px;
+    }
+
+
+    .selected-record {
+
+        height: auto;
+
+        flex-wrap: wrap;
+    }
+
+
+    .selected-record-main {
+
+        min-width: 100%;
+    }
+
+
+    .selected-metrics {
+
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .record-header {
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .record-header h2 {
+
+        font-size: 21px;
+    }
+
+
+    .record-summary {
+
+        grid-template-columns: 1fr;
+
+        height: auto;
+    }
+
+
+    .filters-panel {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .record-table-panel {
+
+        overflow-x: auto;
+    }
+
+
+    .record-table {
+
+        min-width: 950px;
+    }
+
+
+    .selected-metrics {
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .selected-actions {
+
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+}

@@ -1,0 +1,2023 @@
+/* =========================================================
+   BAT-DIAG
+   CONFIGURACION.CSS
+
+   Página de configuración del sistema
+========================================================= */
+
+
+/* =========================================================
+   CONTENIDO GENERAL
+========================================================= */
+
+.configuration-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding-bottom: 18px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.configuration-content::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+
+.configuration-content::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+
+.configuration-content::-webkit-scrollbar-thumb {
+
+    background: #cbd5df;
+
+    border-radius: 10px;
+}
+
+
+.configuration-content::-webkit-scrollbar-thumb:hover {
+
+    background: #aebbc8;
+}
+
+
+/* =========================================================
+   CABECERA
+========================================================= */
+
+.configuration-header {
+
+    min-height: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 2px 5px;
+}
+
+
+.section-kicker {
+
+    margin-bottom: 5px;
+
+    color: #159da9;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.configuration-header h2 {
+
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 27px;
+
+    line-height: 1;
+}
+
+
+.configuration-header p {
+
+    margin: 7px 0 0;
+
+    color: #6e7b8d;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ESTADO SISTEMA
+========================================================= */
+
+.configuration-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 245px;
+
+    padding: 10px 14px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, .04);
+}
+
+
+.status-indicator {
+
+    width: 10px;
+
+    height: 10px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #18ad4c;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(24, 173, 76, .10);
+}
+
+
+.configuration-status strong {
+
+    display: block;
+
+    color: #263142;
+
+    font-size: 10px;
+}
+
+
+.configuration-status small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #7c8999;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+========================================================= */
+
+.configuration-layout {
+
+    display: grid;
+
+    grid-template-columns: 230px minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   ÍNDICE LATERAL
+========================================================= */
+
+.configuration-index {
+
+    position: sticky;
+
+    top: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, .045);
+}
+
+
+.index-title {
+
+    padding: 5px 8px 10px;
+
+    border-bottom:
+        1px solid #e5eaf0;
+
+    margin-bottom: 4px;
+}
+
+
+.index-title span {
+
+    display: block;
+
+    color: #159da9;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.index-title strong {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #263142;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ELEMENTOS DEL ÍNDICE
+========================================================= */
+
+.index-item {
+
+    min-height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 7px 9px;
+
+    border-radius: 7px;
+
+    color: #59677a;
+
+    cursor: pointer;
+
+    transition:
+        background .18s ease,
+        color .18s ease,
+        transform .18s ease;
+}
+
+
+.index-item:hover {
+
+    background: #f2f6f9;
+
+    transform:
+        translateX(2px);
+}
+
+
+.index-item.active {
+
+    background:
+        rgba(23, 109, 204, .09);
+
+    color: #176dcc;
+
+    border-left:
+        3px solid #176dcc;
+}
+
+
+.index-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #f3f6f9;
+
+    font-size: 14px;
+}
+
+
+.index-item.active .index-icon {
+
+    background: #ffffff;
+}
+
+
+.index-item strong {
+
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.index-item small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #8a96a5;
+
+    font-size: 8px;
+}
+
+
+.index-item.active small {
+
+    color: #5780ac;
+}
+
+
+/* =========================================================
+   CONTENEDOR PANELES
+========================================================= */
+
+.configuration-panels {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PANEL DESPLEGABLE
+========================================================= */
+
+.config-panel {
+
+    background: #ffffff;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, .04);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.config-panel[open] {
+
+    border-color:
+        #cbd8e4;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, .055);
+}
+
+
+/* =========================================================
+   CABECERA DESPLEGABLE
+========================================================= */
+
+.config-panel summary {
+
+    min-height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 8px 15px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    user-select: none;
+
+    transition:
+        background .18s ease;
+}
+
+
+.config-panel summary::-webkit-details-marker {
+
+    display: none;
+}
+
+
+.config-panel summary:hover {
+
+    background:
+        #f8fafc;
+}
+
+
+.config-panel[open] summary {
+
+    background:
+        #f7fafc;
+
+    border-bottom:
+        1px solid #e5eaf0;
+}
+
+
+/* =========================================================
+   TÍTULO PANEL
+========================================================= */
+
+.panel-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+
+.panel-icon {
+
+    width: 39px;
+
+    height: 39px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+}
+
+
+.panel-icon.battery {
+
+    background:
+        rgba(23, 109, 204, .10);
+}
+
+
+.panel-icon.test {
+
+    background:
+        rgba(112, 73, 197, .10);
+}
+
+
+.panel-icon.sensor {
+
+    background:
+        rgba(21, 157, 169, .10);
+}
+
+
+.panel-icon.communication {
+
+    background:
+        rgba(233, 149, 8, .10);
+}
+
+
+.panel-icon.storage-icon {
+
+    background:
+        rgba(21, 157, 66, .10);
+}
+
+
+.panel-icon.monitoring {
+
+    background:
+        rgba(23, 109, 204, .10);
+}
+
+
+.panel-icon.alarm {
+
+    background:
+        rgba(228, 62, 72, .10);
+}
+
+
+.panel-icon.report {
+
+    background:
+        rgba(112, 73, 197, .10);
+}
+
+
+.panel-icon.software {
+
+    background:
+        rgba(23, 47, 88, .10);
+}
+
+
+.panel-icon.operator {
+
+    background:
+        rgba(21, 157, 169, .10);
+}
+
+
+.panel-icon.security {
+
+    background:
+        rgba(228, 62, 72, .10);
+}
+
+
+.panel-icon.maintenance {
+
+    background:
+        rgba(95, 109, 127, .10);
+}
+
+
+.panel-title strong {
+
+    display: block;
+
+    color: #263142;
+
+    font-size: 13px;
+
+    line-height: 1.1;
+}
+
+
+.panel-title small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #7b8797;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   FLECHA
+========================================================= */
+
+.panel-arrow {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    background: #f1f4f7;
+
+    color: #68778a;
+
+    font-size: 20px;
+
+    transition:
+        transform .25s ease,
+        background .2s ease;
+}
+
+
+.config-panel[open] .panel-arrow {
+
+    transform:
+        rotate(90deg);
+
+    background:
+        rgba(23, 109, 204, .09);
+
+    color: #176dcc;
+}
+
+
+/* =========================================================
+   CONTENIDO PANEL
+========================================================= */
+
+.panel-content {
+
+    padding: 18px 20px 20px;
+
+    animation:
+        panelOpen .2s ease;
+}
+
+
+@keyframes panelOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-4px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   SUBSECCIONES
+========================================================= */
+
+.subsection-title {
+
+    margin:
+        3px 0 12px;
+
+    padding-bottom: 6px;
+
+    border-bottom:
+        1px solid #edf0f3;
+
+    color: #455367;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+
+.subsection-title:not(:first-child) {
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   FORMULARIOS
+========================================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 13px 18px;
+}
+
+
+.form-group {
+
+    min-width: 0;
+}
+
+
+.form-group.full-width {
+
+    margin-top: 14px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #667488;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid #d6e0e8;
+
+    border-radius: 7px;
+
+    background: #fafbfd;
+
+    color: #263142;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    outline: none;
+
+    transition:
+        border-color .18s ease,
+        background .18s ease,
+        box-shadow .18s ease;
+}
+
+
+.form-group input,
+.form-group select {
+
+    height: 36px;
+
+    padding: 0 11px;
+}
+
+
+.form-group textarea {
+
+    min-height: 72px;
+
+    padding: 10px;
+
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color:
+        #159da9;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(21, 157, 169, .07);
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #a0aab7;
+}
+
+
+/* =========================================================
+   INPUT CON UNIDAD
+========================================================= */
+
+.input-unit {
+
+    position: relative;
+}
+
+
+.input-unit input {
+
+    padding-right: 42px;
+}
+
+
+.input-unit span {
+
+    position: absolute;
+
+    right: 11px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #7b8797;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   RADIO
+========================================================= */
+
+.radio-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+}
+
+
+.radio-option {
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 11px;
+
+    border:
+        1px solid #dce4eb;
+
+    border-radius: 7px;
+
+    background: #fafbfd;
+
+    color: #526176;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.radio-option:has(input:checked) {
+
+    border-color:
+        rgba(23, 109, 204, .35);
+
+    background:
+        rgba(23, 109, 204, .055);
+
+    color: #176dcc;
+
+    font-weight: 600;
+}
+
+
+.radio-option input {
+
+    accent-color: #176dcc;
+}
+
+
+/* =========================================================
+   SWITCHES
+========================================================= */
+
+.switch-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 15px;
+
+    border-top:
+        1px solid #edf0f3;
+}
+
+
+.switch-row {
+
+    position: relative;
+
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 2px;
+
+    border-bottom:
+        1px solid #edf0f3;
+
+    color: #4f5e72;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.switch-row input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.switch-row i {
+
+    position: relative;
+
+    width: 38px;
+
+    height: 21px;
+
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    background: #cbd5df;
+
+    transition:
+        background .2s ease;
+}
+
+
+.switch-row i::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 17px;
+
+    height: 17px;
+
+    top: 2px;
+
+    left: 2px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, .2);
+
+    transition:
+        transform .2s ease;
+}
+
+
+.switch-row input:checked + i {
+
+    background:
+        #159da9;
+}
+
+
+.switch-row input:checked + i::after {
+
+    transform:
+        translateX(17px);
+}
+
+
+/* =========================================================
+   CHECKBOXES
+========================================================= */
+
+.check-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 8px;
+}
+
+
+.check-option {
+
+    min-height: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 10px;
+
+    border:
+        1px solid #dce4eb;
+
+    border-radius: 7px;
+
+    background: #fafbfd;
+
+    color: #526176;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.check-option input {
+
+    width: 15px;
+
+    height: 15px;
+
+    accent-color: #176dcc;
+}
+
+
+/* =========================================================
+   SENSORES
+========================================================= */
+
+.sensor-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 11px;
+}
+
+
+.sensor-card {
+
+    padding: 13px;
+
+    border:
+        1px solid #dce4eb;
+
+    border-radius: 8px;
+
+    background: #fafbfd;
+}
+
+
+.sensor-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 9px;
+
+    border-bottom:
+        1px solid #e6ebef;
+}
+
+
+.sensor-card-header strong {
+
+    color: #344154;
+
+    font-size: 11px;
+}
+
+
+.connected {
+
+    color: #159d42;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.sensor-row {
+
+    min-height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid #edf0f3;
+
+    color: #7b8797;
+
+    font-size: 9px;
+}
+
+
+.sensor-row:last-child {
+
+    border-bottom: none;
+}
+
+
+.sensor-row strong {
+
+    color: #47566a;
+
+    font-size: 9px;
+}
+
+
+.sensor-row input {
+
+    width: 72px;
+
+    height: 26px;
+
+    padding: 0 7px;
+
+    border:
+        1px solid #d4dee7;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #263142;
+
+    font-size: 9px;
+
+    outline: none;
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.button-row {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+.secondary-action {
+
+    min-height: 34px;
+
+    padding: 0 13px;
+
+    border:
+        1px solid #d5dfe7;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #536174;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .18s ease,
+        border-color .18s ease;
+}
+
+
+.secondary-action:hover {
+
+    background:
+        #f4f7f9;
+
+    border-color:
+        #c5d2dc;
+}
+
+
+.calibration-btn {
+
+    margin-top: 15px;
+
+    height: 35px;
+
+    padding: 0 15px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #176dcc;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.calibration-btn:hover {
+
+    background: #1261b9;
+}
+
+
+/* =========================================================
+   CONEXIÓN
+========================================================= */
+
+.connection-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 17px;
+
+    padding: 12px;
+
+    border:
+        1px solid rgba(21, 157, 66, .20);
+
+    border-radius: 8px;
+
+    background:
+        rgba(21, 157, 66, .045);
+}
+
+
+.connection-status strong {
+
+    display: block;
+
+    color: #159d42;
+
+    font-size: 10px;
+}
+
+
+.connection-status small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #788698;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   ALMACENAMIENTO
+========================================================= */
+
+.storage-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 9px;
+}
+
+
+.storage-info-grid > div {
+
+    padding: 11px;
+
+    border:
+        1px solid #dce4eb;
+
+    border-radius: 7px;
+
+    background: #fafbfd;
+}
+
+
+.storage-info-grid span {
+
+    display: block;
+
+    color: #7c8999;
+
+    font-size: 9px;
+}
+
+
+.storage-info-grid strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #344154;
+
+    font-size: 13px;
+}
+
+
+.green-text {
+
+    color: #159d42 !important;
+}
+
+
+.storage-progress {
+
+    height: 8px;
+
+    margin: 14px 0 18px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #e8edf1;
+}
+
+
+.storage-progress-fill {
+
+    width: 78%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #159d42;
+}
+
+
+.danger-actions {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+.danger-btn {
+
+    min-height: 34px;
+
+    padding: 0 13px;
+
+    border:
+        1px solid #efc9cc;
+
+    border-radius: 7px;
+
+    background: #fff7f7;
+
+    color: #d83c48;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   LÍMITES
+========================================================= */
+
+.limit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.limit-card {
+
+    padding: 11px;
+
+    border:
+        1px solid #dce4eb;
+
+    border-radius: 8px;
+
+    background: #fafbfd;
+}
+
+
+.limit-card > span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #6e7b8d;
+
+    font-size: 9px;
+}
+
+
+.limit-card > div {
+
+    position: relative;
+}
+
+
+.limit-card input {
+
+    width: 100%;
+
+    height: 32px;
+
+    box-sizing: border-box;
+
+    padding:
+        0 35px 0 9px;
+
+    border:
+        1px solid #d4dee7;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #263142;
+
+    font-size: 10px;
+
+    outline: none;
+}
+
+
+.limit-card b {
+
+    position: absolute;
+
+    right: 9px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #7b8797;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL SISTEMA
+========================================================= */
+
+.system-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.system-info-grid > div {
+
+    padding: 12px;
+
+    border:
+        1px solid #dce4eb;
+
+    border-radius: 7px;
+
+    background: #fafbfd;
+}
+
+
+.system-info-grid span {
+
+    display: block;
+
+    color: #7c8999;
+
+    font-size: 9px;
+}
+
+
+.system-info-grid strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #344154;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BARRA INFERIOR
+========================================================= */
+
+.configuration-footer {
+
+    min-height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 9px 14px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #d8e1e9;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, .045);
+}
+
+
+.configuration-valid {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.configuration-valid > span {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #18ad4c;
+}
+
+
+.configuration-valid strong {
+
+    display: block;
+
+    color: #263142;
+
+    font-size: 10px;
+}
+
+
+.configuration-valid small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #7c8999;
+
+    font-size: 8px;
+}
+
+
+.configuration-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.reset-btn {
+
+    height: 36px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid #d5dfe7;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #657286;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.reset-btn:hover {
+
+    background: #f5f8fa;
+}
+
+
+.save-btn {
+
+    height: 36px;
+
+    padding: 0 17px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #176dcc;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 8px
+        rgba(23, 109, 204, .20);
+}
+
+
+.save-btn:hover {
+
+    background: #1261b9;
+}
+
+
+/* =========================================================
+   PANTALLAS GRANDES
+========================================================= */
+
+@media (min-width: 1600px) {
+
+    .configuration-header h2 {
+        font-size: 29px;
+    }
+
+
+    .configuration-header p {
+        font-size: 13px;
+    }
+
+
+    .configuration-layout {
+
+        grid-template-columns:
+            250px minmax(0, 1fr);
+    }
+
+
+    .panel-title strong {
+        font-size: 14px;
+    }
+
+
+    .panel-title small {
+        font-size: 10px;
+    }
+
+
+    .form-group label {
+        font-size: 11px;
+    }
+
+
+    .form-group input,
+    .form-group select {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   PANTALLAS MEDIANAS
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .configuration-layout {
+
+        grid-template-columns:
+            190px minmax(0, 1fr);
+    }
+
+
+    .configuration-index {
+
+        padding: 7px;
+    }
+
+
+    .index-item {
+
+        padding: 6px;
+    }
+
+
+    .index-item small {
+
+        display: none;
+    }
+
+
+    .check-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .limit-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .system-info-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .configuration-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .configuration-index {
+
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .index-title {
+
+        grid-column:
+            1 / -1;
+    }
+
+
+    .index-item {
+
+        min-height: 42px;
+    }
+
+
+    .configuration-status {
+
+        display: none;
+    }
+
+
+    .sensor-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .storage-info-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .configuration-header {
+
+        align-items: flex-start;
+    }
+
+
+    .configuration-header h2 {
+
+        font-size: 22px;
+    }
+
+
+    .configuration-header p {
+
+        font-size: 10px;
+    }
+
+
+    .configuration-index {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .form-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .radio-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .check-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .limit-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .storage-info-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .system-info-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .configuration-footer {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .configuration-actions {
+
+        width: 100%;
+    }
+
+
+    .reset-btn,
+    .save-btn {
+
+        flex: 1;
+    }
+
+}

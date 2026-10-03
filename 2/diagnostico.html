@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        BAT-DIAG | Diagnóstico
+    </title>
+
+
+    <!-- CSS GENERAL -->
+
+    <link
+        rel="stylesheet"
+        href="../css/styles.css"
+    >
+
+
+    <!-- CSS ESPECÍFICO -->
+
+    <link
+        rel="stylesheet"
+        href="../css/diagnostico.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="topbar">
+
+
+        <div class="brand">
+
+            <div class="logo">
+                ⚡
+            </div>
+
+
+            <div>
+
+                <h1>
+                    BAT-<span>DIAG</span>
+                </h1>
+
+                <p>
+                    Diagnóstico de Baterías de Segunda Vida
+                </p>
+
+                <small>
+                    Sistema electrónico para monitoreo y análisis
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="control-panel">
+
+
+            <div class="clock">
+
+                <span>
+                    10:35:42 AM
+                </span>
+
+                <small>
+                    15/05/2025
+                </small>
+
+            </div>
+
+
+            <button
+                class="btn start"
+                type="button"
+            >
+                ▶ &nbsp; INICIAR
+            </button>
+
+
+            <button
+                class="btn stop"
+                type="button"
+            >
+                ■ &nbsp; DETENER
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         APLICACIÓN
+    ====================================================== -->
+
+    <div class="app">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+                <aside class="common-sidebar">
+
+            <nav class="common-sidebar-menu">
+                <a href="../index.html" class="common-menu-item">
+                    <span class="common-menu-icon">⌂</span>
+                    <span>Resumen</span>
+                </a>
+                <a href="monitoreo.html" class="common-menu-item">
+                    <span class="common-menu-icon">〽</span>
+                    <span>Monitoreo</span>
+                </a>
+                <a href="diagnostico.html" class="common-menu-item active">
+                    <span class="common-menu-icon">⚡</span>
+                    <span>Diagnóstico</span>
+                </a>
+                <a href="registros.html" class="common-menu-item">
+                    <span class="common-menu-icon">▤</span>
+                    <span>Registros</span>
+                </a>
+                <a href="configuracion.html" class="common-menu-item">
+                    <span class="common-menu-icon">⚙</span>
+                    <span>Configuración</span>
+                </a>
+                <a href="cuenta.html" class="common-menu-item">
+                    <span class="common-menu-icon">◉</span>
+                    <span>Cuenta</span>
+                </a>
+            </nav>
+
+            <section class="common-sidebar-storage">
+                <h3 class="common-storage-title">Almacenamiento</h3>
+
+                <strong class="common-storage-name">E: — BAT-DIAG</strong>
+
+                <div class="common-storage-circle" aria-label="43.8 por ciento ocupado">
+                    <svg class="common-storage-ring" viewBox="0 0 120 120" aria-hidden="true">
+                        <circle class="common-storage-ring-background" cx="60" cy="60" r="48"></circle>
+                        <circle class="common-storage-ring-progress" cx="60" cy="60" r="48" style="stroke-dashoffset: 169.49;"></circle>
+                    </svg>
+                    <span class="common-storage-value">43.8%</span>
+                </div>
+
+                <div class="common-storage-used">43.8% ocupado</div>
+                <div class="common-storage-capacity">28.0 GB / 64.0 GB</div>
+                <div class="common-storage-free">56.3% libre</div>
+            </section>
+
+            <div class="common-sidebar-footer">
+                <span class="common-status-dot"></span>
+                <span>Sistema en ejecución</span>
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CONTENIDO
+        ================================================== -->
+
+        <main class="content diagnostic-content">
+
+
+            <!-- =================================================
+                 CABECERA
+            ================================================== -->
+
+            <section class="diagnostic-header">
+
+
+                <div>
+
+                    <h2>
+                        Diagnóstico de batería
+                    </h2>
+
+                    <p>
+                        Análisis estadístico y evaluación del
+                        comportamiento de la batería.
+                    </p>
+
+                </div>
+
+
+                <div class="diagnostic-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            Análisis disponible
+                        </strong>
+
+                        <small>
+                            Datos procesados: 136 min
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESUMEN DE ANÁLISIS
+            ================================================== -->
+
+            <section class="analysis-summary">
+
+
+                <div class="summary-item">
+
+                    <span class="summary-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Estado del análisis
+                        </small>
+
+                        <strong>
+                            Completo
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span class="summary-icon blue">
+                        ∿
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Variables analizadas
+                        </small>
+
+                        <strong>
+                            5
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span class="summary-icon purple">
+                        Σ
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Características extraídas
+                        </small>
+
+                        <strong>
+                            30
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span class="summary-icon orange">
+                        ⏱
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Duración evaluada
+                        </small>
+
+                        <strong>
+                            136 min
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CARACTERÍSTICAS ESTADÍSTICAS
+            ================================================== -->
+
+            <section class="characteristics-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h3>
+                            Características de las señales
+                        </h3>
+
+                        <p>
+                            Valores estadísticos obtenidos de las
+                            variables medidas.
+                        </p>
+
+                    </div>
+
+
+                    <span class="processed-label">
+                        ✓ Procesado
+                    </span>
+
+                </div>
+
+
+
+                <div class="characteristics-grid">
+
+
+                    <!-- =================================================
+                         VOLTAJE
+                    ================================================== -->
+
+                    <article class="characteristic-card voltage-characteristic">
+
+
+                        <div class="characteristic-header">
+
+                            <span class="characteristic-icon">
+                                V
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Voltaje
+                                </h4>
+
+                                <small>
+                                    Nivel y variabilidad
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-grid">
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Media
+                                </span>
+
+                                <strong>
+                                    12.52 V
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mediana
+                                </span>
+
+                                <strong>
+                                    12.48 V
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Máximo
+                                </span>
+
+                                <strong>
+                                    13.21 V
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mínimo
+                                </span>
+
+                                <strong>
+                                    12.31 V
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Std
+                                </span>
+
+                                <strong>
+                                    0.21 V
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Rango
+                                </span>
+
+                                <strong>
+                                    0.90 V
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         CORRIENTE
+                    ================================================== -->
+
+                    <article class="characteristic-card current-characteristic">
+
+
+                        <div class="characteristic-header">
+
+                            <span class="characteristic-icon">
+                                A
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Corriente
+                                </h4>
+
+                                <small>
+                                    Estabilidad de descarga
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-grid">
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Media
+                                </span>
+
+                                <strong>
+                                    -3.46 A
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mediana
+                                </span>
+
+                                <strong>
+                                    -3.48 A
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Máximo
+                                </span>
+
+                                <strong>
+                                    -3.21 A
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mínimo
+                                </span>
+
+                                <strong>
+                                    -3.62 A
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Std
+                                </span>
+
+                                <strong>
+                                    0.08 A
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    RMS
+                                </span>
+
+                                <strong>
+                                    3.46 A
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         TEMPERATURA BATERÍA
+                    ================================================== -->
+
+                    <article class="characteristic-card battery-characteristic">
+
+
+                        <div class="characteristic-header">
+
+                            <span class="characteristic-icon">
+                                °C
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Temperatura batería
+                                </h4>
+
+                                <small>
+                                    Comportamiento térmico
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-grid">
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Media
+                                </span>
+
+                                <strong>
+                                    31.2 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mediana
+                                </span>
+
+                                <strong>
+                                    31.0 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Máximo
+                                </span>
+
+                                <strong>
+                                    33.7 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mínimo
+                                </span>
+
+                                <strong>
+                                    27.4 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Std
+                                </span>
+
+                                <strong>
+                                    1.65 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    dT/dt
+                                </span>
+
+                                <strong>
+                                    0.15 °C/min
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         TEMPERATURA AMBIENTE
+                    ================================================== -->
+
+                    <article class="characteristic-card ambient-characteristic">
+
+
+                        <div class="characteristic-header">
+
+                            <span class="characteristic-icon">
+                                °C
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Temperatura ambiente
+                                </h4>
+
+                                <small>
+                                    Condiciones del entorno
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-grid">
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Media
+                                </span>
+
+                                <strong>
+                                    26.8 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mediana
+                                </span>
+
+                                <strong>
+                                    26.9 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Máximo
+                                </span>
+
+                                <strong>
+                                    27.8 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mínimo
+                                </span>
+
+                                <strong>
+                                    25.9 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Std
+                                </span>
+
+                                <strong>
+                                    0.42 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Rango
+                                </span>
+
+                                <strong>
+                                    1.9 °C
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         HUMEDAD
+                    ================================================== -->
+
+                    <article class="characteristic-card humidity-characteristic">
+
+
+                        <div class="characteristic-header">
+
+                            <span class="characteristic-icon">
+                                %
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Humedad relativa
+                                </h4>
+
+                                <small>
+                                    Variabilidad ambiental
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-grid">
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Media
+                                </span>
+
+                                <strong>
+                                    60.8 %
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mediana
+                                </span>
+
+                                <strong>
+                                    61.2 %
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Máximo
+                                </span>
+
+                                <strong>
+                                    63.5 %
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Mínimo
+                                </span>
+
+                                <strong>
+                                    58.7 %
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Std
+                                </span>
+
+                                <strong>
+                                    1.21 %
+                                </strong>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span>
+                                    Rango
+                                </span>
+
+                                <strong>
+                                    4.8 %
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INDICADORES CANDIDATOS
+            ================================================== -->
+
+            <section class="indicators-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h3>
+                            Indicadores candidatos
+                        </h3>
+
+                        <p>
+                            Parámetros derivados para evaluar el
+                            estado de la batería.
+                        </p>
+
+                    </div>
+
+
+                    <span class="indicator-count">
+                        6 indicadores
+                    </span>
+
+                </div>
+
+
+
+                <div class="indicator-grid">
+
+
+                    <!-- =================================================
+                         CAÍDA DE VOLTAJE
+                    ================================================== -->
+
+                    <article class="diagnostic-indicator">
+
+                        <div class="indicator-icon blue-indicator">
+                            ΔV
+                        </div>
+
+
+                        <div class="indicator-content">
+
+                            <small>
+                                Caída de voltaje
+                            </small>
+
+                            <strong>
+                                0.82 V
+                            </strong>
+
+                            <span class="indicator-status moderate">
+                                ● Moderado
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         RESISTENCIA
+                    ================================================== -->
+
+                    <article class="diagnostic-indicator">
+
+                        <div class="indicator-icon green-indicator">
+                            Ω
+                        </div>
+
+
+                        <div class="indicator-content">
+
+                            <small>
+                                Resistencia interna
+                            </small>
+
+                            <strong>
+                                45.6 mΩ
+                            </strong>
+
+                            <span class="indicator-status moderate">
+                                ● Moderado
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         TIEMPO
+                    ================================================== -->
+
+                    <article class="diagnostic-indicator">
+
+                        <div class="indicator-icon purple-indicator">
+                            t
+                        </div>
+
+
+                        <div class="indicator-content">
+
+                            <small>
+                                Tiempo de descarga
+                            </small>
+
+                            <strong>
+                                136 min
+                            </strong>
+
+                            <span class="indicator-status good">
+                                ● Bueno
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         ENERGÍA
+                    ================================================== -->
+
+                    <article class="diagnostic-indicator">
+
+                        <div class="indicator-icon orange-indicator">
+                            E
+                        </div>
+
+
+                        <div class="indicator-content">
+
+                            <small>
+                                Energía entregada
+                            </small>
+
+                            <strong>
+                                112.4 Wh
+                            </strong>
+
+                            <span class="indicator-status good">
+                                ● Bueno
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         INCREMENTO TÉRMICO
+                    ================================================== -->
+
+                    <article class="diagnostic-indicator">
+
+                        <div class="indicator-icon red-indicator">
+                            ΔT
+                        </div>
+
+
+                        <div class="indicator-content">
+
+                            <small>
+                                Incremento térmico
+                            </small>
+
+                            <strong>
+                                6.3 °C
+                            </strong>
+
+                            <span class="indicator-status moderate">
+                                ● Moderado
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         TASA DE CALENTAMIENTO
+                    ================================================== -->
+
+                    <article class="diagnostic-indicator">
+
+                        <div class="indicator-icon cyan-indicator">
+                            dT
+                        </div>
+
+
+                        <div class="indicator-content">
+
+                            <small>
+                                Tasa de calentamiento
+                            </small>
+
+                            <strong>
+                                0.15 °C/min
+                            </strong>
+
+                            <span class="indicator-status good">
+                                ● Bueno
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONCLUSIÓN
+            ================================================== -->
+
+            <section class="diagnostic-conclusion">
+
+
+                <div class="conclusion-icon">
+                    ✓
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Evaluación preliminar
+                    </strong>
+
+                    <p>
+                        La batería presenta un comportamiento
+                        estable durante la prueba, con parámetros
+                        térmicos y eléctricos dentro de rangos
+                        aceptables.
+                    </p>
+
+                </div>
+
+
+                <div class="conclusion-status">
+                    Condición moderada
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+
+        <div>
+
+            <span class="status-dot"></span>
+
+            Sistema en ejecución –
+            Adquiriendo y procesando datos
+
+        </div>
+
+
+        <div>
+
+            Datos guardados en:
+
+            <strong>
+                microSD
+            </strong>
+
+            &nbsp; ▣
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

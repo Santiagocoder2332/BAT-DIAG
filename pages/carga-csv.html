@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        BAT-DIAG | Inicialización
+    </title>
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/carga-csv.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PÁGINA PRINCIPAL
+    ====================================================== -->
+
+    <main class="csv-page">
+
+
+        <!-- =================================================
+             PANEL IZQUIERDO
+        ================================================== -->
+
+        <section class="intro-panel">
+
+
+            <!-- =============================================
+                 MARCA
+            ============================================== -->
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    ⚡
+                </div>
+
+                <div class="brand-name">
+                    BAT-<span>DIAG</span>
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 CONTENIDO
+            ============================================== -->
+
+            <div class="intro-content">
+
+
+                <span class="intro-eyebrow">
+                    SISTEMA DE DIAGNÓSTICO
+                </span>
+
+
+                <h1>
+                    Inicialización
+                    <br>
+                    del sistema
+                </h1>
+
+
+                <p>
+                    Antes de ingresar a BAT-DIAG,
+                    carga los datos correspondientes
+                    a la prueba que deseas analizar.
+                </p>
+
+
+                <div class="intro-divider"></div>
+
+
+                <!-- =========================================
+                     INFORMACIÓN
+                ========================================== -->
+
+                <div class="intro-info">
+
+
+                    <div class="intro-info-icon">
+                        ✓
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Datos de la prueba
+                        </strong>
+
+                        <span>
+                            El archivo CSV será analizado
+                            automáticamente antes de iniciar
+                            el sistema.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =============================================
+                 FOOTER
+            ============================================== -->
+
+            <div class="intro-footer">
+
+                BAT-DIAG © 2026
+
+                <span>
+                    •
+                </span>
+
+                Sistema electrónico de
+                monitoreo y análisis
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PANEL DERECHO
+        ================================================== -->
+
+        <section class="upload-panel">
+
+
+            <div class="upload-container">
+
+
+                <!-- =========================================
+                     ENCABEZADO
+                ========================================== -->
+
+                <header class="upload-header">
+
+
+                    <div class="header-icon">
+                        ▤
+                    </div>
+
+
+                    <div>
+
+                        <span class="section-label">
+                            CARGA DE DATOS
+                        </span>
+
+
+                        <h2>
+                            Cargar datos de la prueba
+                        </h2>
+
+
+                        <p>
+                            Selecciona la unidad de almacenamiento
+                            y el archivo CSV correspondiente.
+                        </p>
+
+                    </div>
+
+
+                </header>
+
+
+
+                <!-- =========================================
+                     UNIDAD DE ALMACENAMIENTO
+                ========================================== -->
+
+                <section class="storage-selector">
+
+
+                    <div class="storage-selector-header">
+
+
+                        <div class="storage-icon">
+                            ▤
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Unidad de almacenamiento
+                            </strong>
+
+                            <span>
+                                Selecciona desde dónde se cargará
+                                el archivo de la prueba.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         BOTÓN QUE ABRE EL MODAL
+                    ====================================== -->
+
+                    <button
+                        type="button"
+                        id="storageSelector"
+                        class="storage-select-button"
+                    >
+
+
+                        <div class="selected-storage">
+
+
+                            <span class="selected-storage-icon">
+                                ▣
+                            </span>
+
+
+                            <div>
+
+                                <strong
+                                    id="selectedStorageName"
+                                >
+                                    Selecciona una unidad...
+                                </strong>
+
+
+                                <small
+                                    id="selectedStorageDescription"
+                                >
+                                    No se ha seleccionado
+                                    ninguna unidad
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <span class="storage-arrow">
+                            ▼
+                        </span>
+
+
+                    </button>
+
+
+
+                    <!-- =====================================
+                         ESTADO DE UNIDAD
+                    ====================================== -->
+
+                    <div class="storage-info">
+
+
+                        <span
+                            class="storage-status-dot"
+                        ></span>
+
+
+                        <span id="storageStatus">
+                            Debes seleccionar una
+                            unidad de almacenamiento
+                        </span>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =========================================
+                     ZONA DE CARGA CSV
+                ========================================== -->
+
+                <label
+                    class="drop-zone disabled"
+                    for="csvFile"
+                >
+
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+
+                    <strong>
+                        Selecciona tu archivo CSV
+                    </strong>
+
+
+                    <span>
+                        Haz clic aquí para buscar el archivo
+                    </span>
+
+
+                    <small>
+                        Formato permitido: .CSV
+                    </small>
+
+
+                    <!-- INPUT REAL -->
+
+                    <input
+                        type="file"
+                        id="csvFile"
+                        accept=".csv,text/csv"
+                        disabled
+                    >
+
+
+                </label>
+
+
+
+                <!-- =========================================
+                     ARCHIVO SELECCIONADO
+                ========================================== -->
+
+                <div
+                    class="file-info"
+                    id="fileInfo"
+                >
+
+
+                    <div class="file-icon">
+                        ▤
+                    </div>
+
+
+                    <div>
+
+
+                        <strong
+                            id="fileName"
+                        >
+                            Ningún archivo seleccionado
+                        </strong>
+
+
+                        <small
+                            id="fileStatus"
+                        >
+                            Esperando archivo...
+                        </small>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     ANÁLISIS DEL ARCHIVO
+                ========================================== -->
+
+                <section
+                    class="csv-analysis"
+                    id="csvAnalysis"
+                >
+
+
+                    <!-- =====================================
+                         CABECERA
+                    ====================================== -->
+
+                    <div class="analysis-header">
+
+
+                        <div>
+
+                            <strong>
+                                Análisis del archivo
+                            </strong>
+
+
+                            <span>
+                                Validación automática
+                            </span>
+
+                        </div>
+
+
+                        <span
+                            id="analysisStatus"
+                        >
+                            Esperando archivo
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         DATOS DEL CSV
+                    ====================================== -->
+
+                    <div class="analysis-grid">
+
+
+                        <!-- REGISTROS -->
+
+                        <div class="analysis-item">
+
+                            <span>
+                                Registros
+                            </span>
+
+
+                            <strong
+                                id="rowCount"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- COLUMNAS -->
+
+                        <div class="analysis-item">
+
+                            <span>
+                                Columnas
+                            </span>
+
+
+                            <strong
+                                id="columnCount"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- FECHA INICIAL -->
+
+                        <div class="analysis-item">
+
+                            <span>
+                                Fecha inicial
+                            </span>
+
+
+                            <strong
+                                id="startDate"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- FECHA FINAL -->
+
+                        <div class="analysis-item">
+
+                            <span>
+                                Fecha final
+                            </span>
+
+
+                            <strong
+                                id="endDate"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         ESTADO DE ESTRUCTURA
+                    ====================================== -->
+
+                    <div
+                        class="structure-status"
+                        id="structureStatus"
+                    >
+
+
+                        <span
+                            id="structureIcon"
+                        >
+                            !
+                        </span>
+
+
+                        <div>
+
+
+                            <strong
+                                id="structureTitle"
+                            >
+                                Esperando archivo
+                            </strong>
+
+
+                            <small
+                                id="structureMessage"
+                            >
+                                Selecciona un CSV para analizar
+                                su estructura.
+                            </small>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =========================================
+                     MENSAJE DE VALIDACIÓN
+                ========================================== -->
+
+                <div
+                    class="validation"
+                    id="validation"
+                >
+
+
+                    <span class="validation-icon">
+                        !
+                    </span>
+
+
+                    <span id="validationText">
+
+                        Primero selecciona una unidad
+                        de almacenamiento y carga un
+                        archivo CSV.
+
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     BOTÓN CONTINUAR
+                ========================================== -->
+
+                <button
+                    type="button"
+                    id="continueButton"
+                    class="continue-button"
+                    disabled
+                >
+
+
+                    <span>
+                        CONTINUAR A BAT-DIAG
+                    </span>
+
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MODAL DE UNIDADES DE ALMACENAMIENTO
+    ====================================================== -->
+
+    <div
+        class="storage-modal"
+        id="storageModal"
+    >
+
+
+        <!-- =============================================
+             FONDO OSCURO
+        ============================================== -->
+
+        <div
+            class="storage-modal-overlay"
+        ></div>
+
+
+
+        <!-- =============================================
+             VENTANA
+        ============================================== -->
+
+        <div
+            class="storage-modal-window"
+        >
+
+
+            <!-- =========================================
+                 HEADER
+            ========================================== -->
+
+            <div
+                class="storage-modal-header"
+            >
+
+
+                <div>
+
+
+                    <span class="section-label">
+                        ALMACENAMIENTO
+                    </span>
+
+
+                    <h3>
+                        Seleccionar unidad
+                    </h3>
+
+
+                    <p>
+                        Selecciona la unidad donde se
+                        encuentra el archivo de la prueba.
+                    </p>
+
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="closeStorageModal"
+                    class="close-storage-modal"
+                    aria-label="Cerrar"
+                >
+                    ×
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 ESTADO DE DETECCIÓN
+            ========================================== -->
+
+            <div
+                class="storage-detection-status"
+                id="storageDetectionStatus"
+            >
+
+
+                <span
+                    class="storage-detection-dot"
+                ></span>
+
+
+                <span
+                    id="storageDetectionText"
+                >
+                    Buscando unidades conectadas...
+                </span>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 LISTA DE UNIDADES
+            ========================================== -->
+
+            <div
+                class="storage-list"
+                id="storageList"
+            >
+
+
+                <!--
+
+                    La unidad ficticia se genera
+                    automáticamente mediante
+                    carga-csv.js.
+
+                    Ejemplo:
+
+                    E: — BAT-DIAG
+
+                    28 GB ocupados
+                    36 GB disponibles
+                    64 GB totales
+
+                -->
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 FOOTER
+            ========================================== -->
+
+            <div
+                class="storage-modal-footer"
+            >
+
+
+                <button
+                    type="button"
+                    id="refreshStorage"
+                    class="refresh-storage"
+                >
+
+                    ↻
+                    Detectar nuevamente
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="cancelStorage"
+                    class="cancel-storage"
+                >
+
+                    Cancelar
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="../js/carga-csv.js"
+    ></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BAT-DIAG | Registros</title>
+<link href="../css/common.css" rel="stylesheet"/>
+<link href="../css/registros.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- =====================================================
+         BARRA SUPERIOR
+    ====================================================== -->
+<header class="common-header"><div class="common-header-brand"><div class="common-header-logo">⚡</div><div class="common-header-title"><h1>BAT-<span>DIAG</span></h1><p>Diagnóstico de Baterías de Segunda Vida</p><small>Sistema electrónico para monitoreo y análisis</small></div></div><div class="common-header-actions"><div class="common-header-clock"><strong id="current-time">10:35:42 AM</strong><span id="current-date">15/05/2025</span></div><button class="common-btn-start" id="btn-start" type="button"><span>▶</span><span>INICIAR</span></button><button class="common-btn-stop" id="btn-stop" type="button"><span>■</span><span>DETENER</span></button></div></header>
+<!-- =====================================================
+         APLICACIÓN
+    ====================================================== -->
+<div class="common-app"><div class="common-body"><aside class="common-sidebar">
+<nav class="common-sidebar-menu">
+<a class="common-menu-item" href="../index.html">
+<span class="common-menu-icon">⌂</span>
+<span>Resumen</span>
+</a>
+<a class="common-menu-item" href="monitoreo.html">
+<span class="common-menu-icon">〽</span>
+<span>Monitoreo</span>
+</a>
+<a class="common-menu-item" href="diagnostico.html">
+<span class="common-menu-icon">⚡</span>
+<span>Diagnóstico</span>
+</a>
+<a class="common-menu-item" href="registros.html">
+<span class="common-menu-icon">▤</span>
+<span>Registros</span>
+</a>
+<a class="common-menu-item" href="configuracion.html">
+<span class="common-menu-icon">⚙</span>
+<span>Configuración</span>
+</a>
+<a class="common-menu-item" href="cuenta.html"><span class="common-menu-icon">◉</span><span>Cuenta</span></a></nav>
+<!-- ALMACENAMIENTO -->
+<section class="common-sidebar-storage"><h3 class="common-storage-title">Almacenamiento</h3><strong class="common-storage-name">E: — BAT-DIAG</strong><div class="common-storage-circle"><svg aria-hidden="true" class="common-storage-ring" viewbox="0 0 120 120"><circle class="common-storage-ring-background" cx="60" cy="60" r="48"></circle><circle class="common-storage-ring-progress" cx="60" cy="60" r="48" style="stroke-dashoffset: 169.2;"></circle></svg><span class="common-storage-value">43.8%</span></div><div class="common-storage-used">43.8% ocupado</div><div class="common-storage-capacity">28.0 GB / 64.0 GB</div><div class="common-storage-free">56.3% libre</div></section>
+<div class="common-sidebar-footer"><span class="common-status-dot"></span><span>Sistema en ejecución</span></div></aside><main class="common-main record-content">
+<!-- CABECERA -->
+<section class="record-header">
+<div>
+<h2>
+                        Registros de pruebas
+                    </h2>
+<p>
+                        Historial de mediciones y diagnósticos
+                        realizados sobre las baterías.
+                    </p>
+</div>
+<button class="export-all-btn" type="button">
+<span>
+                        ⇩
+                    </span>
+
+                    Exportar reporte
+
+                </button>
+</section>
+<!-- =================================================
+                 RESUMEN
+            ================================================== -->
+<section class="record-summary">
+<div class="record-summary-card">
+<div class="record-summary-icon blue">
+                        ▤
+                    </div>
+<div>
+<small>
+                            Total de pruebas
+                        </small>
+<strong>
+                            24
+                        </strong>
+</div>
+</div>
+<div class="record-summary-card">
+<div class="record-summary-icon green">
+                        ✓
+                    </div>
+<div>
+<small>
+                            Pruebas completadas
+                        </small>
+<strong>
+                            18
+                        </strong>
+</div>
+</div>
+<div class="record-summary-card">
+<div class="record-summary-icon orange">
+                        !
+                    </div>
+<div>
+<small>
+                            Alertas detectadas
+                        </small>
+<strong>
+                            6
+                        </strong>
+</div>
+</div>
+<div class="record-summary-card">
+<div class="record-summary-icon purple">
+                        ◷
+                    </div>
+<div>
+<small>
+                            Última prueba
+                        </small>
+<strong>
+                            Hoy · 10:35
+                        </strong>
+</div>
+</div>
+</section>
+<!-- =================================================
+                 FILTROS
+            ================================================== -->
+<section class="filters-panel">
+<div class="filter-title">
+<strong>
+                        Filtrar registros
+                    </strong>
+<small>
+                        Seleccione los criterios de búsqueda
+                    </small>
+</div>
+<div class="filter-control">
+<label>
+                        Batería
+                    </label>
+<select>
+<option>
+                            Todas las baterías
+                        </option>
+<option>
+                            BAT_01
+                        </option>
+<option selected="">
+                            BAT_02
+                        </option>
+<option>
+                            BAT_03
+                        </option>
+<option>
+                            BAT_04
+                        </option>
+</select>
+</div>
+<div class="filter-control">
+<label>
+                        Tipo de prueba
+                    </label>
+<select>
+<option>
+                            Todas las pruebas
+                        </option>
+<option>
+                            Descarga controlada
+                        </option>
+<option>
+                            Diagnóstico
+                        </option>
+</select>
+</div>
+<div class="filter-control">
+<label>
+                        Estado
+                    </label>
+<select>
+<option>
+                            Todos
+                        </option>
+<option>
+                            Bueno
+                        </option>
+<option>
+                            Moderado
+                        </option>
+<option>
+                            Alerta
+                        </option>
+</select>
+</div>
+<div class="search-control">
+<label>
+                        Buscar archivo
+                    </label>
+<div class="search-box">
+<span>
+                            🔍
+                        </span>
+<input placeholder="Nombre del archivo..." type="text"/>
+</div>
+</div>
+<button class="filter-btn" type="button">
+                    Buscar
+                </button>
+</section>
+<!-- =================================================
+                 HISTORIAL
+            ================================================== -->
+<section class="record-table-panel">
+<div class="table-heading">
+<div>
+<h3>
+                            Historial de pruebas
+                        </h3>
+<span>
+                            24 registros encontrados
+                        </span>
+</div>
+<div class="storage-label">
+<span class="storage-dot"></span>
+
+                        microSD conectada
+
+                    </div>
+</div>
+<div class="table-wrapper">
+<table class="record-table">
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Archivo</th>
+<th>Batería</th>
+<th>Tipo de prueba</th>
+<th>Duración</th>
+<th>Energía</th>
+<th>Estado</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody>
+<!-- REGISTRO 1 -->
+<tr class="selected-row">
+<td>
+<strong>
+                                        15/05/2025
+                                    </strong>
+<small>
+                                        10:35 AM
+                                    </small>
+</td>
+<td>
+<span class="file-name">
+                                        prueba_20250515_1035.csv
+                                    </span>
+</td>
+<td>
+<span class="battery-tag">
+                                        BAT_02
+                                    </span>
+</td>
+<td>
+                                    Descarga controlada
+                                </td>
+<td>
+                                    136 min
+                                </td>
+<td>
+                                    112.4 Wh
+                                </td>
+<td>
+<span class="status good">
+                                        ● Bueno
+                                    </span>
+</td>
+<td>
+<div class="action-buttons">
+<button class="action-btn view" title="Ver prueba" type="button">
+                                            👁
+                                        </button>
+<button class="action-btn analyze" title="Analizar prueba" type="button">
+                                            ◈
+                                        </button>
+<button class="action-btn export" title="Exportar reporte" type="button">
+                                            ⇩
+                                        </button>
+</div>
+</td>
+</tr>
+<!-- REGISTRO 2 -->
+<tr>
+<td>
+<strong>
+                                        14/05/2025
+                                    </strong>
+<small>
+                                        09:12 AM
+                                    </small>
+</td>
+<td>
+<span class="file-name">
+                                        prueba_20250514_0912.csv
+                                    </span>
+</td>
+<td>
+<span class="battery-tag">
+                                        BAT_01
+                                    </span>
+</td>
+<td>
+                                    Descarga controlada
+                                </td>
+<td>
+                                    121 min
+                                </td>
+<td>
+                                    98.7 Wh
+                                </td>
+<td>
+<span class="status moderate">
+                                        ● Moderado
+                                    </span>
+</td>
+<td>
+<div class="action-buttons">
+<button class="action-btn view" title="Ver prueba" type="button">
+                                            👁
+                                        </button>
+<button class="action-btn analyze" title="Analizar prueba" type="button">
+                                            ◈
+                                        </button>
+<button class="action-btn export" title="Exportar reporte" type="button">
+                                            ⇩
+                                        </button>
+</div>
+</td>
+</tr>
+<!-- REGISTRO 3 -->
+<tr>
+<td>
+<strong>
+                                        13/05/2025
+                                    </strong>
+<small>
+                                        03:40 PM
+                                    </small>
+</td>
+<td>
+<span class="file-name">
+                                        prueba_20250513_1540.csv
+                                    </span>
+</td>
+<td>
+<span class="battery-tag">
+                                        BAT_03
+                                    </span>
+</td>
+<td>
+                                    Diagnóstico
+                                </td>
+<td>
+                                    108 min
+                                </td>
+<td>
+                                    91.6 Wh
+                                </td>
+<td>
+<span class="status good">
+                                        ● Bueno
+                                    </span>
+</td>
+<td>
+<div class="action-buttons">
+<button class="action-btn view" title="Ver prueba" type="button">
+                                            👁
+                                        </button>
+<button class="action-btn analyze" title="Analizar prueba" type="button">
+                                            ◈
+                                        </button>
+<button class="action-btn export" title="Exportar reporte" type="button">
+                                            ⇩
+                                        </button>
+</div>
+</td>
+</tr>
+<!-- REGISTRO 4 -->
+<tr>
+<td>
+<strong>
+                                        12/05/2025
+                                    </strong>
+<small>
+                                        11:08 AM
+                                    </small>
+</td>
+<td>
+<span class="file-name">
+                                        prueba_20250512_1108.csv
+                                    </span>
+</td>
+<td>
+<span class="battery-tag">
+                                        BAT_02
+                                    </span>
+</td>
+<td>
+                                    Descarga controlada
+                                </td>
+<td>
+                                    94 min
+                                </td>
+<td>
+                                    72.3 Wh
+                                </td>
+<td>
+<span class="status alert">
+                                        ● Alerta
+                                    </span>
+</td>
+<td>
+<div class="action-buttons">
+<button class="action-btn view" title="Ver prueba" type="button">
+                                            👁
+                                        </button>
+<button class="action-btn analyze" title="Analizar prueba" type="button">
+                                            ◈
+                                        </button>
+<button class="action-btn export" title="Exportar reporte" type="button">
+                                            ⇩
+                                        </button>
+</div>
+</td>
+</tr>
+<!-- REGISTRO 5 -->
+<tr>
+<td>
+<strong>
+                                        10/05/2025
+                                    </strong>
+<small>
+                                        02:20 PM
+                                    </small>
+</td>
+<td>
+<span class="file-name">
+                                        prueba_20250510_1420.csv
+                                    </span>
+</td>
+<td>
+<span class="battery-tag">
+                                        BAT_04
+                                    </span>
+</td>
+<td>
+                                    Descarga controlada
+                                </td>
+<td>
+                                    118 min
+                                </td>
+<td>
+                                    104.8 Wh
+                                </td>
+<td>
+<span class="status good">
+                                        ● Bueno
+                                    </span>
+</td>
+<td>
+<div class="action-buttons">
+<button class="action-btn view" title="Ver prueba" type="button">
+                                            👁
+                                        </button>
+<button class="action-btn analyze" title="Analizar prueba" type="button">
+                                            ◈
+                                        </button>
+<button class="action-btn export" title="Exportar reporte" type="button">
+                                            ⇩
+                                        </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- PAGINACIÓN -->
+<div class="table-footer">
+<span>
+                        Mostrando 1–5 de 24 registros
+                    </span>
+<div class="pagination">
+<button type="button">
+                            ‹
+                        </button>
+<button class="page-active" type="button">
+                            1
+                        </button>
+<button type="button">
+                            2
+                        </button>
+<button type="button">
+                            3
+                        </button>
+<button type="button">
+                            4
+                        </button>
+<button type="button">
+                            5
+                        </button>
+<button type="button">
+                            ›
+                        </button>
+</div>
+</div>
+</section>
+<!-- =================================================
+                 PRUEBA SELECCIONADA
+            ================================================== -->
+<section class="selected-record">
+<div class="selected-record-main">
+<div class="selected-file-icon">
+                        CSV
+                    </div>
+<div class="selected-record-info">
+<span>
+                            PRUEBA SELECCIONADA
+                        </span>
+<h3>
+                            prueba_20250515_1035.csv
+                        </h3>
+<p>
+                            BAT_02 · Descarga controlada ·
+                            15/05/2025 · 10:35 AM
+                        </p>
+</div>
+</div>
+<div class="selected-metrics">
+<div>
+<small>
+                            Voltaje final
+                        </small>
+<strong>
+                            12.31 V
+                        </strong>
+</div>
+<div>
+<small>
+                            Corriente
+                        </small>
+<strong>
+                            -3.48 A
+                        </strong>
+</div>
+<div>
+<small>
+                            Energía
+                        </small>
+<strong>
+                            112.4 Wh
+                        </strong>
+</div>
+<div>
+<small>
+                            Estado
+                        </small>
+<strong class="metric-good">
+                            Bueno
+                        </strong>
+</div>
+</div>
+<div class="selected-actions">
+<button class="secondary-btn" type="button">
+                        👁   Ver prueba
+                    </button>
+<button class="secondary-btn" type="button">
+                        ◈   Diagnóstico
+                    </button>
+<button class="primary-export-btn" type="button">
+                        ⇩   Exportar reporte
+                    </button>
+</div>
+</section>
+</main></div></div>
+<!-- =====================================================
+         PIE DE PÁGINA
+    ====================================================== -->
+<footer class="common-bottom-bar"><div class="common-bottom-left"><span class="common-status-dot"></span><span>Sistema en ejecución – Adquiriendo y procesando datos</span></div><div class="common-bottom-right"><span>Datos guardados en:</span><strong>microSD</strong><span>▣</span></div></footer>
+<script>
+function actualizarReloj() {
+    const ahora = new Date();
+
+    const hora = ahora.toLocaleTimeString(
+        'es-CO',
+        {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        }
+    );
+
+    const fecha = ahora.toLocaleDateString(
+        'es-CO',
+        {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        }
+    );
+
+    const reloj = document.getElementById('current-time');
+    const fechaElemento = document.getElementById('current-date');
+
+    if (reloj) {
+        reloj.textContent = hora;
+    }
+
+    if (fechaElemento) {
+        fechaElemento.textContent = fecha;
+    }
+}
+
+actualizarReloj();
+setInterval(actualizarReloj, 1000);
+</script>
+<script src="../js/registros.js"></script>
+<script src="../js/registros-pdf.js"></script>
+</body>
+</html>

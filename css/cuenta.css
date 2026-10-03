@@ -1,0 +1,1104 @@
+/* =========================================================
+   BAT-DIAG
+   CUENTA.CSS
+========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+========================================================= */
+
+.account-content {
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+.account-header {
+
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 5px;
+}
+
+
+.account-header h2 {
+
+    font-size: 25px;
+
+    line-height: 1.1;
+
+    color: #101d34;
+}
+
+
+.account-header p {
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: #647185;
+}
+
+
+.account-status {
+
+    background: #ffffff;
+
+    border:
+        1px solid #e0e5eb;
+
+    border-radius: 9px;
+
+    padding:
+        10px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 2px 7px
+        rgba(
+            0,
+            0,
+            0,
+            0.05
+        );
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.account-grid {
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.25fr;
+
+    grid-template-rows:
+        1fr
+        1fr;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   TARJETA GENERAL
+========================================================= */
+
+.account-card {
+
+    background: #ffffff;
+
+    border:
+        1px solid #dde3ea;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(
+            10,
+            25,
+            50,
+            0.06
+        );
+
+    min-width: 0;
+
+    min-height: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   TITULO DE TARJETA
+========================================================= */
+
+.account-card-title {
+
+    height: 58px;
+
+    flex-shrink: 0;
+
+    padding:
+        0 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    border-bottom:
+        1px solid #edf0f4;
+}
+
+
+.title-icon {
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+.profile-icon {
+
+    background: #e7f5f4;
+
+    color: #10aaa3;
+}
+
+
+.preferences-icon {
+
+    background: #e8f0fc;
+
+    color: #2575d2;
+}
+
+
+.security-icon {
+
+    background: #f1eafb;
+
+    color: #7650c1;
+}
+
+
+.session-icon {
+
+    background: #fff2df;
+
+    color: #e98b17;
+}
+
+
+.account-card-title h3 {
+
+    font-size: 14px;
+
+    color: #14213a;
+}
+
+
+.account-card-title p {
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color: #748096;
+}
+
+
+/* =========================================================
+   PERFIL
+========================================================= */
+
+.profile-body {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding:
+        14px 18px 10px;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.avatar {
+
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b3e78,
+            #0caab7
+        );
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 10px
+        rgba(
+            8,
+            81,
+            120,
+            0.18
+        );
+}
+
+
+.profile-info h3 {
+
+    font-size: 16px;
+
+    color: #14213a;
+}
+
+
+.username {
+
+    margin-top: 2px;
+
+    color: #758196;
+
+    font-size: 11px;
+}
+
+
+.role-badge {
+
+    display: inline-block;
+
+    margin-top: 6px;
+
+    padding:
+        3px 9px;
+
+    border-radius: 12px;
+
+    background: #e8f2ff;
+
+    color: #176dcc;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DETALLES PERFIL
+========================================================= */
+
+.profile-details {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 0;
+
+    margin:
+        0 18px;
+
+    border-top:
+        1px solid #edf0f4;
+
+    border-bottom:
+        1px solid #edf0f4;
+}
+
+
+.detail {
+
+    min-width: 0;
+
+    padding:
+        8px 5px;
+}
+
+
+.detail:nth-child(1),
+.detail:nth-child(2) {
+
+    border-bottom:
+        1px solid #edf0f4;
+}
+
+
+.detail:nth-child(odd) {
+
+    border-right:
+        1px solid #edf0f4;
+}
+
+
+.detail span {
+
+    display: block;
+
+    color: #748096;
+
+    font-size: 9px;
+
+    margin-bottom: 2px;
+}
+
+
+.detail strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #172033;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.green-text {
+    color: #12a64a !important;
+}
+
+
+/* =========================================================
+   BOTON SECUNDARIO
+========================================================= */
+
+.secondary-button {
+
+    align-self: flex-start;
+
+    margin:
+        auto 18px 12px;
+
+    height: 30px;
+
+    padding:
+        0 16px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #cdd6e1;
+
+    border-radius: 6px;
+
+    color: #176dcc;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.secondary-button:hover {
+
+    background: #f0f6fd;
+
+    border-color: #176dcc;
+}
+
+
+/* =========================================================
+   PREFERENCIAS
+========================================================= */
+
+.preferences-list {
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding:
+        4px 17px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+
+
+.preference-row {
+
+    min-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom:
+        1px solid #edf0f4;
+}
+
+
+.preference-row:last-child {
+    border-bottom: none;
+}
+
+
+.preference-row strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #1a2740;
+}
+
+
+.preference-row span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color: #788498;
+}
+
+
+.preference-row select {
+
+    width: 130px;
+
+    height: 29px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid #cfd7e2;
+
+    border-radius: 6px;
+
+    padding:
+        0 8px;
+
+    background: #ffffff;
+
+    color: #26344c;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.switch {
+
+    position: relative;
+
+    width: 38px;
+    height: 20px;
+
+    flex-shrink: 0;
+}
+
+
+.switch input {
+
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+}
+
+
+.slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #cbd3df;
+
+    border-radius: 20px;
+
+    transition:
+        background 0.25s ease;
+}
+
+
+.slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+    height: 14px;
+
+    left: 3px;
+    top: 3px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 1px 3px
+        rgba(
+            0,
+            0,
+            0,
+            0.2
+        );
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.switch input:checked + .slider {
+
+    background: #13b8bb;
+}
+
+
+.switch input:checked + .slider::before {
+
+    transform:
+        translateX(18px);
+}
+
+
+/* =========================================================
+   SEGURIDAD
+========================================================= */
+
+.security-content {
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding:
+        5px 17px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+
+
+.security-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-height: 50px;
+
+    border-bottom:
+        1px solid #edf0f4;
+
+    padding:
+        5px 0;
+}
+
+
+.security-item:last-child {
+    border-bottom: none;
+}
+
+
+.security-symbol {
+
+    width: 31px;
+    height: 31px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e7f7ed;
+
+    color: #16a44c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.security-item div:nth-child(2) {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.security-item strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #18243a;
+}
+
+
+.security-item span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color: #778398;
+}
+
+
+.outline-button {
+
+    height: 27px;
+
+    padding:
+        0 12px;
+
+    border:
+        1px solid #cbd5e2;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #176dcc;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.outline-button:hover {
+
+    border-color: #176dcc;
+
+    background: #f1f6fd;
+}
+
+
+.security-good {
+
+    color: #12a64a !important;
+
+    font-weight: 600;
+
+    font-size: 9px !important;
+}
+
+
+/* =========================================================
+   SESIÓN
+========================================================= */
+
+.session-data {
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding:
+        8px 18px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 12px;
+
+    align-items: center;
+}
+
+
+.session-data div {
+
+    min-width: 0;
+
+    padding-right: 10px;
+
+    border-right:
+        1px solid #edf0f4;
+}
+
+
+.session-data div:last-child {
+    border-right: none;
+}
+
+
+.session-data span {
+
+    display: block;
+
+    font-size: 9px;
+
+    color: #758196;
+
+    margin-bottom: 4px;
+}
+
+
+.session-data strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #172033;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   CERRAR SESIÓN
+========================================================= */
+
+.logout-button {
+
+    height: 32px;
+
+    margin:
+        0 18px 12px;
+
+    border:
+        1px solid #e3b9bc;
+
+    border-radius: 6px;
+
+    background: #fff7f7;
+
+    color: #d62f3a;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.logout-button:hover {
+
+    background: #fff0f0;
+
+    border-color: #d62f3a;
+}
+
+
+/* =========================================================
+   TARJETA INFERIOR
+========================================================= */
+
+.account-footer-card {
+
+    height: 55px;
+
+    flex-shrink: 0;
+
+    background: #ffffff;
+
+    border:
+        1px solid #dde3ea;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(
+            10,
+            25,
+            50,
+            0.05
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding:
+        0 16px;
+}
+
+
+.footer-account-icon {
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e6f7f7;
+
+    color: #0bb8bc;
+
+    font-size: 15px;
+}
+
+
+.account-footer-card strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #172033;
+}
+
+
+.account-footer-card p {
+
+    font-size: 9px;
+
+    color: #758196;
+
+    margin-top: 2px;
+}
+
+
+.version {
+
+    margin-left: auto;
+
+    color: #7b8799;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .account-grid {
+
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+
+    .preference-row span {
+        display: none;
+    }
+
+
+    .session-data {
+
+        grid-template-columns:
+            1fr 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .account-grid {
+
+        grid-template-columns:
+            1fr;
+
+        overflow-y: auto;
+
+        padding-right: 3px;
+    }
+
+
+    .account-card {
+
+        min-height: 250px;
+    }
+
+
+    .account-footer-card {
+
+        display: none;
+    }
+
+
+    .account-header {
+
+        height: 50px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .account-header h2 {
+        font-size: 20px;
+    }
+
+
+    .account-status {
+        display: none;
+    }
+
+
+    .profile-details {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .detail:nth-child(odd) {
+
+        border-right: none;
+    }
+
+
+    .detail:nth-child(3) {
+        border-bottom:
+            1px solid #edf0f4;
+    }
+
+
+    .session-data {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .session-data div {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #edf0f4;
+
+        padding-bottom: 6px;
+    }
+
+
+    .preference-row {
+
+        gap: 8px;
+    }
+
+}

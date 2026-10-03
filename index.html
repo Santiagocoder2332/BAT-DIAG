@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>BAT-DIAG | Diagnóstico de Baterías</title>
+
+    <!-- CSS PRINCIPAL -->
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         APLICACIÓN PRINCIPAL
+    ========================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =====================================================
+             HEADER GLOBAL
+        ====================================================== -->
+
+        <header class="top-header">
+
+
+            <!-- IDENTIDAD DE LA APLICACIÓN -->
+
+            <div class="header-title">
+
+                <div class="header-logo">
+                    ⚡
+                </div>
+
+
+                <div class="header-brand-text">
+
+                    <h1>
+                        BAT-<span>DIAG</span>
+                    </h1>
+
+                    <p>
+                        Diagnóstico de Baterías de Segunda Vida
+                    </p>
+
+                    <small>
+                        Sistema electrónico para monitoreo y análisis
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTROLES DEL SISTEMA -->
+
+            <div class="header-actions">
+
+
+                <!-- RELOJ -->
+
+                <div class="header-clock">
+
+                    <strong id="current-time">
+                        --:--:--
+                    </strong>
+
+                    <span id="current-date">
+                        --/--/----
+                    </span>
+
+                </div>
+
+
+                <!-- BOTÓN INICIAR -->
+
+                <button
+                    type="button"
+                    id="btn-start"
+                    class="btn-start"
+                >
+
+                    <span class="button-icon">
+                        ▶
+                    </span>
+
+                    <span>
+                        INICIAR
+                    </span>
+
+                </button>
+
+
+                <!-- BOTÓN DETENER -->
+
+                <button
+                    type="button"
+                    id="btn-stop"
+                    class="btn-stop"
+                >
+
+                    <span class="button-icon">
+                        ■
+                    </span>
+
+                    <span>
+                        DETENER
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =====================================================
+             CUERPO DE LA APLICACIÓN
+        ====================================================== -->
+
+        <div class="app-body">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+            <aside class="sidebar">
+
+
+                <!-- =================================================
+                     MENÚ PRINCIPAL
+                ================================================== -->
+
+                <nav class="sidebar-menu">
+
+
+                    <!-- RESUMEN -->
+
+                    <a
+                        href="index.html"
+                        class="menu-item active"
+                    >
+
+                        <span class="menu-icon">
+                            ⌂
+                        </span>
+
+                        <span class="menu-text">
+                            Resumen
+                        </span>
+
+                    </a>
+
+
+                    <!-- MONITOREO -->
+
+                    <a
+                        href="pages/monitoreo.html"
+                        class="menu-item"
+                    >
+
+                        <span class="menu-icon">
+                            〽
+                        </span>
+
+                        <span class="menu-text">
+                            Monitoreo
+                        </span>
+
+                    </a>
+
+
+                    <!-- DIAGNÓSTICO -->
+
+                    <a
+                        href="pages/diagnostico.html"
+                        class="menu-item"
+                    >
+
+                        <span class="menu-icon">
+                            ⚡
+                        </span>
+
+                        <span class="menu-text">
+                            Diagnóstico
+                        </span>
+
+                    </a>
+
+
+                    <!-- REGISTROS -->
+
+                    <a
+                        href="pages/registros.html"
+                        class="menu-item"
+                    >
+
+                        <span class="menu-icon">
+                            ▤
+                        </span>
+
+                        <span class="menu-text">
+                            Registros
+                        </span>
+
+                    </a>
+
+
+                    <!-- CONFIGURACIÓN -->
+
+                    <a
+                        href="pages/configuracion.html"
+                        class="menu-item"
+                    >
+
+                        <span class="menu-icon">
+                            ⚙
+                        </span>
+
+                        <span class="menu-text">
+                            Configuración
+                        </span>
+
+                    </a>
+
+
+                    <!-- CUENTA -->
+
+                    <a
+                        href="pages/cuenta.html"
+                        class="menu-item"
+                    >
+
+                        <span class="menu-icon">
+                            ◉
+                        </span>
+
+                        <span class="menu-text">
+                            Cuenta
+                        </span>
+
+                    </a>
+
+
+                </nav>
+
+
+
+                <!-- =================================================
+                     ALMACENAMIENTO
+                ================================================== -->
+
+                <section class="sidebar-storage">
+
+
+                    <h3 class="storage-title">
+                        Almacenamiento
+                    </h3>
+
+
+                    <strong
+                        class="storage-name"
+                        id="storage-name"
+                        data-storage-name
+                    >
+                        --
+                    </strong>
+
+
+                    <!-- CÍRCULO -->
+
+                    <div class="storage-circle">
+
+
+                        <svg
+                            class="storage-ring"
+                            viewBox="0 0 120 120"
+                        >
+
+
+                            <circle
+                                class="storage-ring-background"
+                                cx="60"
+                                cy="60"
+                                r="48"
+                            ></circle>
+
+
+                            <circle
+                                class="storage-ring-progress"
+                                id="storage-ring-progress"
+                                data-storage-ring
+                                cx="60"
+                                cy="60"
+                                r="48"
+                            ></circle>
+
+
+                        </svg>
+
+
+                        <div class="storage-circle-value">
+
+                            <strong
+                                id="storage-percent"
+                                data-storage-percent
+                            >
+                                --
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- DATOS -->
+
+                    <div
+                        class="storage-used"
+                        id="storage-used"
+                        data-storage-used
+                    >
+                        --
+                    </div>
+
+
+                    <div
+                        class="storage-capacity"
+                        id="storage-capacity"
+                        data-storage-capacity
+                    >
+                        --
+                    </div>
+
+
+                    <div
+                        class="storage-free"
+                        id="storage-free"
+                        data-storage-free
+                    >
+                        --
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     ESTADO DEL SISTEMA
+                ================================================== -->
+
+                <div class="sidebar-footer">
+
+                    <span class="status-dot"></span>
+
+                    <span>
+                        Sistema en ejecución
+                    </span>
+
+                </div>
+
+
+            </aside>
+
+
+
+            <!-- =================================================
+                 CONTENIDO PRINCIPAL
+            ================================================== -->
+
+            <main class="main-content">
+
+
+                <div class="dashboard">
+
+
+                    <!-- =================================================
+                         FILA SUPERIOR
+                    ================================================== -->
+
+                    <div class="dashboard-top">
+
+
+                        <!-- =================================================
+                             ESTADO DEL SISTEMA
+                        ================================================== -->
+
+                        <section class="panel system-panel">
+
+
+                            <div class="panel-header panel-header-green">
+
+                                <span class="panel-symbol">
+                                    ●
+                                </span>
+
+                                <h2>
+                                    ESTADO DEL SISTEMA
+                                </h2>
+
+                            </div>
+
+
+                            <div class="system-body">
+
+
+                                <!-- ESTADO -->
+
+                                <div class="system-status-row">
+
+                                    <span class="status-dot large"></span>
+
+                                    <strong
+                                        id="system-status"
+                                        data-system-status
+                                    >
+                                        Esperando datos de prueba
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="system-divider"></div>
+
+
+                                <!-- TIEMPO DE PRUEBA -->
+
+                                <div class="system-data">
+
+                                    <span class="data-label">
+                                        Tiempo de prueba
+                                    </span>
+
+                                    <strong
+                                        class="elapsed-value"
+                                        id="elapsed-time"
+                                        data-elapsed-time
+                                    >
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="system-divider"></div>
+
+
+                                <!-- ARCHIVO -->
+
+                                <div class="system-data">
+
+                                    <span class="data-label">
+                                        Archivo actual
+                                    </span>
+
+                                    <strong
+                                        class="file-name"
+                                        id="current-file"
+                                        data-current-file
+                                    >
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="system-divider"></div>
+
+
+                                <!-- ALMACENAMIENTO -->
+
+                                <div class="system-data">
+
+                                    <span class="data-label">
+                                        Almacenamiento
+                                    </span>
+
+
+                                    <strong
+                                        class="storage-inline-name"
+                                        id="almacenamiento"
+                                        data-storage-name
+                                    >
+                                        --
+                                    </strong>
+
+
+                                    <div class="storage-progress">
+
+                                        <div
+                                            class="storage-progress-bar"
+                                            id="storage-progress"
+                                            data-storage-progress
+                                        ></div>
+
+                                    </div>
+
+
+                                    <div class="storage-inline-info">
+
+                                        <span
+                                            id="storage-used-inline"
+                                            data-storage-used
+                                        >
+                                            --
+                                        </span>
+
+
+                                        <span
+                                            id="storage-free-inline"
+                                            data-storage-free
+                                        >
+                                            --
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </section>
+
+
+
+                        <!-- =================================================
+                             VARIABLES MEDIDAS
+                        ================================================== -->
+
+                        <section class="panel variables-panel">
+
+
+                            <div class="panel-header panel-header-blue">
+
+                                <span class="panel-symbol">
+                                    〽
+                                </span>
+
+                                <h2>
+
+                                    VARIABLES MEDIDAS
+
+                                    <small>
+                                        (TIEMPO REAL)
+                                    </small>
+
+                                </h2>
+
+                            </div>
+
+
+                            <div class="variables-body">
+
+
+                                <!-- VOLTAJE -->
+
+                                <div class="variable-row">
+
+                                    <div class="variable-icon voltage-icon">
+                                        V
+                                    </div>
+
+
+                                    <span class="variable-name">
+                                        Voltaje
+                                    </span>
+
+
+                                    <strong
+                                        class="variable-value"
+                                        id="voltage-value"
+                                    >
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- CORRIENTE -->
+
+                                <div class="variable-row">
+
+                                    <div class="variable-icon current-icon">
+                                        A
+                                    </div>
+
+
+                                    <span class="variable-name">
+                                        Corriente
+                                    </span>
+
+
+                                    <strong
+                                        class="variable-value"
+                                        id="current-value"
+                                    >
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- TEMPERATURA BATERÍA -->
+
+                                <div class="variable-row">
+
+                                    <div class="variable-icon battery-temp-icon">
+                                        °C
+                                    </div>
+
+
+                                    <span class="variable-name">
+                                        Temperatura batería
+                                    </span>
+
+
+                                    <strong
+                                        class="variable-value"
+                                        id="battery-temperature-value"
+                                    >
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- TEMPERATURA AMBIENTE -->
+
+                                <div class="variable-row">
+
+                                    <div class="variable-icon ambient-temp-icon">
+                                        °C
+                                    </div>
+
+
+                                    <span class="variable-name">
+                                        Temperatura ambiente
+                                    </span>
+
+
+                                    <strong
+                                        class="variable-value"
+                                        id="ambient-temperature-value"
+                                    >
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- HUMEDAD -->
+
+                                <div class="variable-row">
+
+                                    <div class="variable-icon humidity-icon">
+                                        %
+                                    </div>
+
+
+                                    <span class="variable-name">
+                                        Humedad relativa
+                                    </span>
+
+
+                                    <strong
+                                        class="variable-value"
+                                        id="humidity-value"
+                                    >
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </section>
+
+
+
+                        <!-- =================================================
+                             INDICADORES CANDIDATOS
+                        ================================================== -->
+
+                        <section class="panel indicators-panel">
+
+
+                            <div class="panel-header panel-header-purple">
+
+                                <span class="panel-symbol">
+                                    ▧
+                                </span>
+
+                                <h2>
+
+                                    INDICADORES CANDIDATOS
+
+                                    <small>
+                                        (RESULTADOS DE ANÁLISIS)
+                                    </small>
+
+                                </h2>
+
+                            </div>
+
+
+                            <div class="indicators-body">
+
+
+                                <div class="indicator-grid">
+
+
+                                    <!-- CAÍDA DE VOLTAJE -->
+
+                                    <div class="indicator-card">
+
+                                        <span class="indicator-title">
+                                            Caída de voltaje ΔV
+                                        </span>
+
+
+                                        <strong
+                                            class="indicator-value blue"
+                                            id="voltage-drop"
+                                        >
+                                            --
+                                        </strong>
+
+
+                                        <small class="indicator-status">
+                                            • Pendiente
+                                        </small>
+
+                                    </div>
+
+
+
+                                    <!-- RESISTENCIA -->
+
+                                    <div class="indicator-card">
+
+                                        <span class="indicator-title">
+                                            Resistencia interna aparente Rint
+                                        </span>
+
+
+                                        <strong
+                                            class="indicator-value green"
+                                            id="internal-resistance"
+                                        >
+                                            --
+                                        </strong>
+
+
+                                        <small class="indicator-status">
+                                            • Pendiente
+                                        </small>
+
+                                    </div>
+
+
+
+                                    <!-- TIEMPO DE DESCARGA -->
+
+                                    <div class="indicator-card">
+
+                                        <span class="indicator-title">
+                                            Tiempo de descarga t<sub>desc</sub>
+                                        </span>
+
+
+                                        <strong
+                                            class="indicator-value purple"
+                                            id="discharge-time"
+                                        >
+                                            --
+                                        </strong>
+
+
+                                        <small class="indicator-status">
+                                            • Pendiente
+                                        </small>
+
+                                    </div>
+
+
+
+                                    <!-- ENERGÍA -->
+
+                                    <div class="indicator-card">
+
+                                        <span class="indicator-title">
+                                            Energía entregada E
+                                        </span>
+
+
+                                        <strong
+                                            class="indicator-value orange"
+                                            id="energy-delivered"
+                                        >
+                                            --
+                                        </strong>
+
+
+                                        <small class="indicator-status">
+                                            • Pendiente
+                                        </small>
+
+                                    </div>
+
+
+
+                                    <!-- INCREMENTO TÉRMICO -->
+
+                                    <div class="indicator-card">
+
+                                        <span class="indicator-title">
+                                            Incremento térmico ΔT
+                                        </span>
+
+
+                                        <strong
+                                            class="indicator-value red"
+                                            id="thermal-increase"
+                                        >
+                                            --
+                                        </strong>
+
+
+                                        <small class="indicator-status">
+                                            • Pendiente
+                                        </small>
+
+                                    </div>
+
+
+
+                                    <!-- TASA DE CALENTAMIENTO -->
+
+                                    <div class="indicator-card">
+
+                                        <span class="indicator-title">
+                                            Tasa de calentamiento dT/dt
+                                        </span>
+
+
+                                        <strong
+                                            class="indicator-value blue"
+                                            id="heating-rate"
+                                        >
+                                            --
+                                        </strong>
+
+
+                                        <small class="indicator-status">
+                                            • Pendiente
+                                        </small>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <!-- PIE -->
+
+                                <div class="indicator-footer">
+
+                                    <span>
+                                        ⓘ
+                                    </span>
+
+                                    <span>
+                                        Indicadores calculados a partir del
+                                        procesamiento de las señales del CSV.
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </section>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         FILA INFERIOR
+                    ================================================== -->
+
+                    <div class="dashboard-bottom">
+
+
+                        <!-- =================================================
+                             GRÁFICA
+                        ================================================== -->
+
+                        <section class="panel chart-panel">
+
+
+                            <div class="panel-header panel-header-cyan">
+
+                                <span class="panel-symbol">
+                                    ▧
+                                </span>
+
+                                <h2>
+                                    COMPORTAMIENTO EN EL TIEMPO
+                                </h2>
+
+                            </div>
+
+
+                            <!-- CONTROLES -->
+
+                            <div class="chart-controls">
+
+
+                                <label for="chart-variable">
+                                    Variable:
+                                </label>
+
+
+                                <select
+                                    id="chart-variable"
+                                    class="chart-select"
+                                >
+
+                                    <option value="voltaje">
+                                        Voltaje
+                                    </option>
+
+
+                                    <option value="corriente">
+                                        Corriente
+                                    </option>
+
+
+                                    <option value="tempBateria">
+                                        Temperatura batería
+                                    </option>
+
+
+                                    <option value="tempAmbiente">
+                                        Temperatura ambiente
+                                    </option>
+
+
+                                    <option value="humedad">
+                                        Humedad relativa
+                                    </option>
+
+                                </select>
+
+
+                                <label class="checkbox-option">
+
+                                    <input
+                                        type="checkbox"
+                                        id="show-grid"
+                                        checked
+                                    >
+
+                                    <span>
+                                        Mostrar rejilla
+                                    </span>
+
+                                </label>
+
+
+                                <label class="checkbox-option">
+
+                                    <input
+                                        type="checkbox"
+                                        id="auto-scale"
+                                        checked
+                                    >
+
+                                    <span>
+                                        Auto escalado
+                                    </span>
+
+                                </label>
+
+
+                            </div>
+
+
+                            <!-- ÁREA DE GRÁFICA -->
+
+                            <div
+                                class="chart-container"
+                                id="chart-container"
+                            >
+
+
+                                <canvas
+                                    id="main-chart"
+                                ></canvas>
+
+
+                                <div
+                                    class="chart-loading"
+                                    id="chart-loading"
+                                >
+                                    Cargando datos de la prueba...
+                                </div>
+
+
+                            </div>
+
+
+                        </section>
+
+
+
+                        <!-- =================================================
+                             COLUMNA DERECHA
+                        ================================================== -->
+
+                        <div class="right-column">
+
+
+                            <!-- =================================================
+                                 INFORMACIÓN DE LA BATERÍA
+                            ================================================== -->
+
+                            <section class="panel battery-info-panel">
+
+
+                                <div class="panel-header panel-header-orange">
+
+                                    <span class="panel-symbol">
+                                        ▣
+                                    </span>
+
+                                    <h2>
+                                        INFORMACIÓN DE LA BATERÍA
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="battery-info-body">
+
+
+                                    <div class="battery-info-row">
+
+                                        <span>
+                                            Tipo de batería:
+                                        </span>
+
+                                        <strong>
+                                            Desconocido
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="battery-info-row">
+
+                                        <span>
+                                            Capacidad nominal:
+                                        </span>
+
+                                        <strong>
+                                            Desconocida
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="battery-info-row">
+
+                                        <span>
+                                            Voltaje nominal:
+                                        </span>
+
+                                        <strong>
+                                            Desconocido
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="battery-info-row">
+
+                                        <span>
+                                            Fabricante:
+                                        </span>
+
+                                        <strong>
+                                            Desconocido
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="battery-info-row">
+
+                                        <span>
+                                            Modelo:
+                                        </span>
+
+                                        <strong>
+                                            Desconocido
+                                        </strong>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </section>
+
+
+
+                            <!-- =================================================
+                                 REGISTRO DE EVENTOS
+                            ================================================== -->
+
+                            <section class="panel events-panel">
+
+
+                                <div class="panel-header panel-header-blue">
+
+                                    <span class="panel-symbol">
+                                        ▤
+                                    </span>
+
+                                    <h2>
+                                        REGISTRO DE EVENTOS
+                                    </h2>
+
+                                </div>
+
+
+                                <div
+                                    class="events-body"
+                                    id="events-container"
+                                >
+
+
+                                    <div class="event-row">
+
+                                        <strong>
+                                            --
+                                        </strong>
+
+                                        <span>
+                                            Sistema iniciado
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="event-row">
+
+                                        <strong>
+                                            --
+                                        </strong>
+
+                                        <span>
+                                            Datos del CSV cargados
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="event-row">
+
+                                        <strong>
+                                            --
+                                        </strong>
+
+                                        <span>
+                                            Esperando análisis
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </section>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             BARRA DE ESTADO INFERIOR
+        ====================================================== -->
+
+        <footer class="bottom-status-bar">
+
+
+            <div class="bottom-status-left">
+
+                <span class="status-dot"></span>
+
+                <span>
+                    Sistema listo
+                </span>
+
+            </div>
+
+
+            <div class="bottom-status-right">
+
+                <span>
+                    Datos cargados desde:
+                </span>
+
+
+                <strong
+                    id="bottom-storage-name"
+                    data-storage-name
+                >
+                    --
+                </strong>
+
+            </div>
+
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MODAL DE DATOS REQUERIDOS
+    ====================================================== -->
+
+    <div
+        class="data-required-overlay"
+        id="data-required-overlay"
+        style="display: none;"
+    >
+
+
+        <div class="data-required-modal">
+
+
+            <div class="data-required-icon">
+                ▤
+            </div>
+
+
+            <h2>
+                Datos de prueba requeridos
+            </h2>
+
+
+            <p>
+                Debes cargar un archivo CSV antes de utilizar BAT-DIAG.
+            </p>
+
+
+            <button
+                type="button"
+                onclick="window.location.href='pages/cargar-csv.html'"
+            >
+                CARGAR ARCHIVO CSV
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT PRINCIPAL
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT DE GRÁFICAS
+    ====================================================== -->
+
+    <script src="js/graficas.js"></script>
+
+
+
+    <!-- =====================================================
+         RELOJ
+    ====================================================== -->
+
+    <script>
+
+        function actualizarReloj() {
+
+            const ahora = new Date();
+
+
+            const hora =
+                ahora.toLocaleTimeString(
+                    "es-CO",
+                    {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        second: "2-digit"
+                    }
+                );
+
+
+            const fecha =
+                ahora.toLocaleDateString(
+                    "es-CO",
+                    {
+                        day: "2-digit",
+                        month: "2-digit",
+                        year: "numeric"
+                    }
+                );
+
+
+            const horaElemento =
+                document.getElementById(
+                    "current-time"
+                );
+
+
+            const fechaElemento =
+                document.getElementById(
+                    "current-date"
+                );
+
+
+            if (horaElemento) {
+
+                horaElemento.textContent =
+                    hora;
+
+            }
+
+
+            if (fechaElemento) {
+
+                fechaElemento.textContent =
+                    fecha;
+
+            }
+
+        }
+
+
+        actualizarReloj();
+
+
+        setInterval(
+            actualizarReloj,
+            1000
+        );
+
+
+
+        /* =====================================================
+           CONTROLES DE GRÁFICA
+        ====================================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const chartVariable =
+                    document.getElementById(
+                        "chart-variable"
+                    );
+
+
+                const showGrid =
+                    document.getElementById(
+                        "show-grid"
+                    );
+
+
+                const autoScale =
+                    document.getElementById(
+                        "auto-scale"
+                    );
+
+
+                /* =================================================
+                   CAMBIO DE VARIABLE
+                ================================================== */
+
+                if (chartVariable) {
+
+                    chartVariable.addEventListener(
+                        "change",
+                        function () {
+
+
+                            window.BAT_DIAG_CHART_DATA =
+                                window.BAT_DIAG_CHART_DATA ||
+                                {};
+
+
+                            window.BAT_DIAG_CHART_DATA.variable =
+                                this.value;
+
+
+                            document.dispatchEvent(
+
+                                new CustomEvent(
+                                    "batdiag:chart-variable-change",
+                                    {
+                                        detail: {
+                                            variable:
+                                                this.value
+                                        }
+                                    }
+                                )
+
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   REJILLA
+                ================================================== */
+
+                if (showGrid) {
+
+                    showGrid.addEventListener(
+                        "change",
+                        function () {
+
+
+                            document.dispatchEvent(
+
+                                new CustomEvent(
+                                    "batdiag:grid-change",
+                                    {
+                                        detail: {
+                                            show:
+                                                this.checked
+                                        }
+                                    }
+                                )
+
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   AUTO ESCALADO
+                ================================================== */
+
+                if (autoScale) {
+
+                    autoScale.addEventListener(
+                        "change",
+                        function () {
+
+
+                            document.dispatchEvent(
+
+                                new CustomEvent(
+                                    "batdiag:autoscale-change",
+                                    {
+                                        detail: {
+                                            enabled:
+                                                this.checked
+                                        }
+                                    }
+                                )
+
+                            );
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

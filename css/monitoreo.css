@@ -1,0 +1,867 @@
+/* =========================================================
+   BAT-DIAG
+   MONITOREO.CSS
+========================================================= */
+
+
+/* =========================================================
+   CONTENIDO DE MONITOREO
+========================================================= */
+
+.monitoring-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-height: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CABECERA
+========================================================= */
+
+.monitor-header {
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 4px;
+}
+
+
+.monitor-header h2 {
+
+    font-size: 21px;
+
+    color: #172033;
+
+    line-height: 1.1;
+
+    margin-bottom: 3px;
+}
+
+
+.monitor-header p {
+
+    font-size: 11px;
+
+    color: #697586;
+}
+
+
+/* =========================================================
+   ESTADO DE ADQUISICIÓN
+========================================================= */
+
+.acquisition-status {
+
+    height: 44px;
+
+    padding:
+        6px 14px;
+
+    background: white;
+
+    border:
+        1px solid #e1e6ed;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    box-shadow:
+        0 2px 6px
+        rgba(0, 0, 0, 0.04);
+}
+
+
+.acquisition-status .status-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    background: #18a94b;
+}
+
+
+.acquisition-status strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #172033;
+}
+
+
+.acquisition-status small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color: #758195;
+}
+
+
+/* =========================================================
+   VALORES ACTUALES
+========================================================= */
+
+.monitor-values {
+
+    width: 100%;
+
+    height: 94px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            5,
+            minmax(0, 1fr)
+        );
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   TARJETA DE VARIABLE
+========================================================= */
+
+.monitor-value {
+
+    position: relative;
+
+    min-width: 0;
+
+    background: white;
+
+    border:
+        1px solid #e2e7ed;
+
+    border-radius: 9px;
+
+    padding:
+        12px 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   ICONO
+========================================================= */
+
+.value-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   COLORES DE VARIABLES
+========================================================= */
+
+.voltage-card .value-icon {
+
+    color: #176dcc;
+
+    border:
+        2px solid #176dcc;
+
+    background:
+        rgba(23, 109, 204, 0.05);
+}
+
+
+.current-card .value-icon {
+
+    color: #18a657;
+
+    border:
+        2px solid #18a657;
+
+    background:
+        rgba(24, 166, 87, 0.05);
+}
+
+
+.battery-temp-card .value-icon {
+
+    color: #ed3c46;
+
+    border:
+        2px solid #ed3c46;
+
+    background:
+        rgba(237, 60, 70, 0.05);
+}
+
+
+.ambient-temp-card .value-icon {
+
+    color: #e99816;
+
+    border:
+        2px solid #e99816;
+
+    background:
+        rgba(233, 152, 22, 0.05);
+}
+
+
+.humidity-card .value-icon {
+
+    color: #7049c5;
+
+    border:
+        2px solid #7049c5;
+
+    background:
+        rgba(112, 73, 197, 0.05);
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL VALOR
+========================================================= */
+
+.value-info {
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+.value-info span {
+
+    display: block;
+
+    font-size: 10px;
+
+    color: #697586;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.value-info strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 19px;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+}
+
+
+.value-info small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 8px;
+
+    color: #8a94a5;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   COLORES DE VALORES
+========================================================= */
+
+.voltage-card .value-info strong {
+    color: #176dcc;
+}
+
+
+.current-card .value-info strong {
+    color: #18a657;
+}
+
+
+.battery-temp-card .value-info strong {
+    color: #ed3c46;
+}
+
+
+.ambient-temp-card .value-info strong {
+    color: #e99816;
+}
+
+
+.humidity-card .value-info strong {
+    color: #7049c5;
+}
+
+
+/* =========================================================
+   ESTADO DEL SENSOR
+========================================================= */
+
+.sensor-state {
+
+    position: absolute;
+
+    top: 9px;
+
+    right: 10px;
+
+    font-size: 9px;
+
+    color: #18a94b;
+}
+
+
+/* =========================================================
+   ÁREA DE GRÁFICAS
+========================================================= */
+
+.monitor-charts {
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    grid-template-rows:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 10px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TARJETA DE GRÁFICA
+========================================================= */
+
+.monitor-chart {
+
+    min-width: 0;
+
+    min-height: 0;
+
+    background: white;
+
+    border:
+        1px solid #e1e6ed;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, 0.05);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   CABECERA DE GRÁFICA
+========================================================= */
+
+.chart-header {
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    padding:
+        7px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid #edf0f3;
+}
+
+
+.chart-header > div:first-child {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   ICONO DE GRÁFICA
+========================================================= */
+
+.chart-icon {
+
+    width: 29px;
+
+    height: 29px;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.voltage-icon {
+
+    color: #176dcc;
+
+    background:
+        rgba(23, 109, 204, 0.10);
+}
+
+
+.current-icon {
+
+    color: #18a657;
+
+    background:
+        rgba(24, 166, 87, 0.10);
+}
+
+
+.battery-temp-icon {
+
+    color: #ed3c46;
+
+    background:
+        rgba(237, 60, 70, 0.10);
+}
+
+
+.ambient-icon {
+
+    color: #e99816;
+
+    background:
+        rgba(233, 152, 22, 0.10);
+}
+
+
+.humidity-icon {
+
+    color: #7049c5;
+
+    background:
+        rgba(112, 73, 197, 0.10);
+}
+
+
+/* =========================================================
+   TEXTO DE CABECERA
+========================================================= */
+
+.chart-header h3 {
+
+    font-size: 11px;
+
+    line-height: 1.1;
+
+    color: #172033;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.chart-header small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 8px;
+
+    color: #7a8495;
+
+    white-space: nowrap;
+}
+
+
+.chart-current {
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    margin-left: 8px;
+
+    color: #176dcc;
+}
+
+
+.current-value {
+    color: #18a657;
+}
+
+
+.temperature-value {
+    color: #ed3c46;
+}
+
+
+.ambient-value {
+    color: #e99816;
+}
+
+
+.humidity-value {
+    color: #7049c5;
+}
+
+
+/* =========================================================
+   GRÁFICA
+========================================================= */
+
+.chart {
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+
+    padding:
+        7px 10px 0 7px;
+}
+
+
+/* =========================================================
+   EJE Y
+========================================================= */
+
+.chart-y-axis {
+
+    width: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding:
+        2px 4px 3px 0;
+
+    text-align: right;
+
+    font-size: 8px;
+
+    color: #8a94a5;
+}
+
+
+/* =========================================================
+   ÁREA DE GRÁFICA
+========================================================= */
+
+.chart-area {
+
+    flex: 1;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    position: relative;
+
+    border-left:
+        1px solid #cbd2dc;
+
+    border-bottom:
+        1px solid #cbd2dc;
+
+    background-image:
+
+        linear-gradient(
+            #edf0f4 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            #edf0f4 1px,
+            transparent 1px
+        );
+
+    background-size:
+        25% 25%,
+        10% 100%;
+
+    overflow: hidden;
+}
+
+
+.chart-area svg {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+}
+
+
+/* =========================================================
+   EJE X
+========================================================= */
+
+.chart-x-axis {
+
+    height: 18px;
+
+    flex-shrink: 0;
+
+    margin:
+        0 10px 0 41px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #8a94a5;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   GRÁFICA DE HUMEDAD
+========================================================= */
+
+.humidity-chart {
+
+    grid-column:
+        1 / 3;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1400px) {
+
+    .monitor-header h2 {
+        font-size: 19px;
+    }
+
+
+    .monitor-value {
+        padding:
+            10px;
+    }
+
+
+    .value-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .value-info strong {
+        font-size: 16px;
+    }
+
+
+    .value-info span {
+        font-size: 9px;
+    }
+
+
+    .chart-current {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .monitor-values {
+
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+
+        height: 140px;
+    }
+
+
+    .monitor-charts {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        grid-template-rows:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .humidity-chart {
+
+        grid-column:
+            1 / 3;
+    }
+
+}
+
+
+/* =========================================================
+   PANTALLAS PEQUEÑAS
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .monitor-values {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        height: 190px;
+    }
+
+
+    .monitor-charts {
+
+        grid-template-columns:
+            1fr;
+
+        grid-template-rows:
+            repeat(
+                5,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .humidity-chart {
+
+        grid-column: auto;
+    }
+
+
+    .monitor-header {
+
+        height: 60px;
+    }
+
+}

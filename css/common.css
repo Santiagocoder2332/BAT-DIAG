@@ -1,0 +1,1921 @@
+/* =========================================================
+   BAT-DIAG
+   common.css
+   ESTILOS COMPARTIDOS DE LAS SUBPÁGINAS
+
+   IMPORTANTE:
+   Este archivo NO contiene estilos del dashboard/index.
+   El dashboard utiliza styles.css.
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --common-navy: #061e45;
+    --common-navy-dark: #041936;
+
+    --common-cyan: #10b9c2;
+    --common-cyan-dark: #08a6af;
+
+    --common-blue: #176dcc;
+
+    --common-green: #16aa55;
+    --common-red: #ed3b43;
+    --common-orange: #f48b12;
+
+    --common-white: #ffffff;
+
+    --common-background: #eef3f8;
+
+    --common-text: #092755;
+    --common-text-soft: #607594;
+    --common-muted: #8997aa;
+
+    --common-border: #d9e1eb;
+
+    --common-header-height: 118px;
+
+    --common-sidebar-width: 260px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+
+    min-height: 100%;
+
+}
+
+
+html {
+
+    overflow-x: hidden;
+
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--common-background);
+
+    color:
+        var(--common-text);
+
+    overflow-x: hidden;
+
+}
+
+
+button,
+input,
+select,
+textarea {
+
+    font-family: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+* {
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        #aebdce
+        transparent;
+
+}
+
+
+*::-webkit-scrollbar {
+
+    width: 7px;
+
+    height: 7px;
+
+}
+
+
+*::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+*::-webkit-scrollbar-thumb {
+
+    background:
+        #aebdce;
+
+    border-radius: 20px;
+
+}
+
+
+*::-webkit-scrollbar-thumb:hover {
+
+    background:
+        #8498b0;
+
+}
+
+
+/* =========================================================
+   CONTENEDOR GENERAL DE SUBPÁGINAS
+========================================================= */
+
+.common-app {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        var(--common-background);
+
+}
+
+
+/* =========================================================
+   HEADER GLOBAL
+========================================================= */
+
+.common-header {
+
+    width: 100%;
+
+    height:
+        var(--common-header-height);
+
+    min-height:
+        var(--common-header-height);
+
+    flex-shrink: 0;
+
+    background:
+        var(--common-navy);
+
+    color:
+        var(--common-white);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        16px 28px;
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .05
+        );
+
+    position: relative;
+
+    z-index: 100;
+
+}
+
+
+/* =========================================================
+   MARCA DEL HEADER
+========================================================= */
+
+.common-header-brand {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+}
+
+
+.common-header-logo {
+
+    width: 72px;
+
+    height: 72px;
+
+    min-width: 72px;
+
+    flex-shrink: 0;
+
+    border:
+        2px solid
+        var(--common-cyan);
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        #ff9c31;
+
+    font-size: 37px;
+
+    line-height: 1;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .015
+        );
+
+}
+
+
+.common-header-title {
+
+    min-width: 0;
+
+}
+
+
+.common-header-title h1 {
+
+    color:
+        var(--common-white);
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing:
+        -.5px;
+
+}
+
+
+.common-header-title h1 span {
+
+    color:
+        var(--common-cyan);
+
+}
+
+
+.common-header-title p {
+
+    margin-top: 6px;
+
+    color:
+        var(--common-white);
+
+    font-size: 16px;
+
+    line-height: 1.2;
+
+}
+
+
+.common-header-title small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color:
+        #c4d4e8;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================================
+   ACCIONES DEL HEADER
+========================================================= */
+
+.common-header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+.common-header-clock {
+
+    min-width: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 2px;
+
+}
+
+
+.common-header-clock strong {
+
+    color:
+        var(--common-white);
+
+    font-size: 16px;
+
+}
+
+
+.common-header-clock span {
+
+    color:
+        #cbd8e9;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   BOTONES DEL HEADER
+========================================================= */
+
+.common-btn-start,
+.common-btn-stop {
+
+    height: 44px;
+
+    min-width: 125px;
+
+    padding:
+        0 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    color:
+        var(--common-white);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition:
+        filter .18s ease,
+        transform .12s ease,
+        box-shadow .18s ease;
+
+}
+
+
+.common-btn-start {
+
+    background:
+        #0eae4a;
+
+}
+
+
+.common-btn-stop {
+
+    background:
+        #ed3039;
+
+}
+
+
+.common-btn-start:hover,
+.common-btn-stop:hover {
+
+    filter:
+        brightness(1.07);
+
+    box-shadow:
+        0 4px 14px
+        rgba(
+            0,
+            0,
+            0,
+            .18
+        );
+
+}
+
+
+.common-btn-start:active,
+.common-btn-stop:active {
+
+    transform:
+        scale(.98);
+
+}
+
+
+/* =========================================================
+   ESTRUCTURA INFERIOR
+========================================================= */
+
+.common-body {
+
+    width: 100%;
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+
+    align-items: stretch;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.common-sidebar {
+
+    width:
+        var(--common-sidebar-width);
+
+    min-width:
+        var(--common-sidebar-width);
+
+    min-height:
+        calc(
+            100vh -
+            var(--common-header-height)
+        );
+
+    background:
+        var(--common-navy);
+
+    color:
+        var(--common-white);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    position:
+        relative;
+
+    z-index: 50;
+
+    overflow:
+        hidden;
+
+}
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
+
+.common-sidebar-menu {
+
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    padding-top: 12px;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   ELEMENTOS DEL MENÚ
+========================================================= */
+
+.common-menu-item {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 64px;
+
+    min-height: 64px;
+
+    padding:
+        0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    color:
+        #f1f5fb;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    overflow: hidden;
+
+    transition:
+        color .25s ease;
+
+}
+
+
+/* =========================================================
+   EFECTO LÍQUIDO BLANCO
+========================================================= */
+
+.common-menu-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    left: 0;
+
+    top: 4px;
+
+    bottom: 4px;
+
+    width: 100%;
+
+    background:
+        #ffffff;
+
+    border-radius:
+        0 34px 34px 0;
+
+    transform:
+        translateX(-102%);
+
+    transition:
+        transform .30s
+        cubic-bezier(
+            .22,
+            .61,
+            .36,
+            1
+        );
+
+    box-shadow:
+        0 2px 9px
+        rgba(
+            0,
+            0,
+            0,
+            .08
+        );
+
+}
+
+
+.common-menu-item:hover::before {
+
+    transform:
+        translateX(0);
+
+}
+
+
+.common-menu-item.active::before {
+
+    transform:
+        translateX(0);
+
+}
+
+
+/* =========================================================
+   CONTENIDO SOBRE EL EFECTO
+========================================================= */
+
+.common-menu-item > * {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   COLOR DEL TEXTO
+========================================================= */
+
+.common-menu-item:hover {
+
+    color:
+        var(--common-navy);
+
+}
+
+
+.common-menu-item.active {
+
+    color:
+        var(--common-navy);
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   ICONOS
+========================================================= */
+
+.common-menu-icon {
+
+    width: 30px;
+
+    min-width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    color:
+        #ffffff;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.common-menu-item:hover
+.common-menu-icon {
+
+    color:
+        var(--common-cyan);
+
+    transform:
+        translateX(2px);
+
+}
+
+
+.common-menu-item.active
+.common-menu-icon {
+
+    color:
+        var(--common-cyan);
+
+}
+
+
+/* =========================================================
+   ALMACENAMIENTO
+========================================================= */
+
+.common-sidebar-storage {
+
+    flex-shrink: 0;
+
+    padding:
+        18px 14px 12px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .06
+        );
+
+}
+
+
+.common-storage-title {
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+}
+
+
+.common-storage-name {
+
+    display: block;
+
+    color:
+        var(--common-cyan);
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* =========================================================
+   CÍRCULO DE ALMACENAMIENTO
+========================================================= */
+
+.common-storage-circle {
+
+    width: 102px;
+
+    height: 102px;
+
+    margin:
+        0 auto 6px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.common-storage-ring {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    transform:
+        rotate(-90deg);
+
+}
+
+
+.common-storage-ring-background,
+.common-storage-ring-progress {
+
+    fill: none;
+
+    stroke-width: 10;
+
+}
+
+
+.common-storage-ring-background {
+
+    stroke:
+        #17385f;
+
+}
+
+
+.common-storage-ring-progress {
+
+    stroke:
+        var(--common-cyan);
+
+    stroke-linecap: round;
+
+    stroke-dasharray:
+        301.59;
+
+    stroke-dashoffset:
+        301.59;
+
+    transition:
+        stroke-dashoffset .5s ease;
+
+}
+
+
+.common-storage-value {
+
+    position: relative;
+
+    z-index: 2;
+
+    color:
+        #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   DATOS DE ALMACENAMIENTO
+========================================================= */
+
+.common-storage-used,
+.common-storage-capacity,
+.common-storage-free {
+
+    color:
+        #ffffff;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+.common-storage-free {
+
+    color:
+        var(--common-cyan);
+
+}
+
+
+/* =========================================================
+   ESTADO INFERIOR DEL SIDEBAR
+========================================================= */
+
+.common-sidebar-footer {
+
+    min-height: 34px;
+
+    flex-shrink: 0;
+
+    padding:
+        0 16px 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        #ffffff;
+
+    font-size: 10px;
+
+}
+
+
+.common-status-dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    min-width: 12px;
+
+    border-radius: 50%;
+
+    background:
+        var(--common-green);
+
+    display: inline-block;
+
+}
+
+
+/* =========================================================
+   CONTENIDO DE SUBPÁGINA
+========================================================= */
+
+.common-main {
+
+    flex: 1;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    background:
+        var(--common-background);
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+
+}
+
+
+/* =========================================================
+   CONTENEDOR DE SUBPÁGINA
+========================================================= */
+
+.common-page {
+
+    width: 100%;
+
+    max-width: 1600px;
+
+    margin:
+        0 auto;
+
+    padding:
+        24px;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO DE SUBPÁGINA
+========================================================= */
+
+.common-page-header {
+
+    width: 100%;
+
+    margin-bottom: 22px;
+
+}
+
+
+.common-page-label {
+
+    color:
+        var(--common-cyan);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 6px;
+
+}
+
+
+.common-page-header h1 {
+
+    color:
+        var(--common-navy);
+
+    font-size: 30px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+}
+
+
+.common-page-header p {
+
+    margin-top: 7px;
+
+    color:
+        var(--common-text-soft);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   TARJETA GENÉRICA DE SUBPÁGINAS
+========================================================= */
+
+.common-card {
+
+    width: 100%;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--common-border);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 14px
+        rgba(
+            8,
+            38,
+            83,
+            .08
+        );
+
+}
+
+
+/* =========================================================
+   TÍTULO DE TARJETA
+========================================================= */
+
+.common-card-header {
+
+    min-height: 50px;
+
+    padding:
+        0 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    border-bottom:
+        1px solid
+        var(--common-border);
+
+}
+
+
+.common-card-header h2 {
+
+    color:
+        var(--common-navy);
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+}
+
+
+.common-card-body {
+
+    padding: 18px;
+
+}
+
+
+/* =========================================================
+   BADGES / ESTADOS
+========================================================= */
+
+.common-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.common-badge-success {
+
+    color:
+        #087b3a;
+
+    background:
+        #e7f8ee;
+
+}
+
+
+.common-badge-warning {
+
+    color:
+        #9a6200;
+
+    background:
+        #fff3d8;
+
+}
+
+
+.common-badge-danger {
+
+    color:
+        #b72b36;
+
+    background:
+        #ffebed;
+
+}
+
+
+.common-badge-info {
+
+    color:
+        #1266bd;
+
+    background:
+        #eaf3ff;
+
+}
+
+
+/* =========================================================
+   BOTÓN GENERAL DE SUBPÁGINAS
+========================================================= */
+
+.common-button {
+
+    min-height: 40px;
+
+    padding:
+        0 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    background:
+        var(--common-cyan);
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition:
+        filter .18s ease,
+        transform .12s ease;
+
+}
+
+
+.common-button:hover {
+
+    filter:
+        brightness(1.06);
+
+}
+
+
+.common-button:active {
+
+    transform:
+        scale(.98);
+
+}
+
+
+.common-button-secondary {
+
+    background:
+        #e7edf5;
+
+    color:
+        var(--common-navy);
+
+}
+
+
+.common-button-danger {
+
+    background:
+        var(--common-red);
+
+}
+
+
+/* =========================================================
+   INPUTS GENERALES
+========================================================= */
+
+.common-input,
+.common-select,
+.common-textarea {
+
+    width: 100%;
+
+    border:
+        1px solid
+        var(--common-border);
+
+    border-radius: 7px;
+
+    background:
+        #ffffff;
+
+    color:
+        var(--common-text);
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition:
+        border-color .18s ease,
+        box-shadow .18s ease;
+
+}
+
+
+.common-input,
+.common-select {
+
+    height: 40px;
+
+    padding:
+        0 11px;
+
+}
+
+
+.common-textarea {
+
+    min-height: 100px;
+
+    padding: 10px 11px;
+
+    resize: vertical;
+
+}
+
+
+.common-input:focus,
+.common-select:focus,
+.common-textarea:focus {
+
+    border-color:
+        var(--common-cyan);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            16,
+            185,
+            194,
+            .12
+        );
+
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.common-label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        var(--common-text);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   MENSAJES
+========================================================= */
+
+.common-message {
+
+    width: 100%;
+
+    padding:
+        11px 13px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+
+}
+
+
+.common-message-success {
+
+    color:
+        #087b3a;
+
+    background:
+        #e8f8ef;
+
+    border:
+        1px solid
+        #c5ecd5;
+
+}
+
+
+.common-message-warning {
+
+    color:
+        #956000;
+
+    background:
+        #fff4dd;
+
+    border:
+        1px solid
+        #f5dfaa;
+
+}
+
+
+.common-message-error {
+
+    color:
+        #b72c38;
+
+    background:
+        #ffebed;
+
+    border:
+        1px solid
+        #f3c8cc;
+
+}
+
+
+.common-message-info {
+
+    color:
+        #1266bd;
+
+    background:
+        #eaf3ff;
+
+    border:
+        1px solid
+        #cfe2fa;
+
+}
+
+
+/* =========================================================
+   FOOTER GENERAL
+========================================================= */
+
+.common-bottom-bar {
+
+    width: 100%;
+
+    min-height: 30px;
+
+    padding:
+        0 14px;
+
+    background:
+        var(--common-navy);
+
+    color:
+        #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    font-size: 10px;
+
+}
+
+
+.common-bottom-left,
+.common-bottom-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    min-width: 0;
+
+}
+
+
+/* =========================================================
+   UTILIDADES
+========================================================= */
+
+.common-hidden {
+
+    display: none !important;
+
+}
+
+
+.common-flex {
+
+    display: flex;
+
+}
+
+
+.common-flex-center {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.common-flex-between {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.common-text-center {
+
+    text-align: center;
+
+}
+
+
+.common-text-right {
+
+    text-align: right;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    :root {
+
+        --common-sidebar-width: 230px;
+
+    }
+
+
+    .common-header {
+
+        padding:
+            14px 20px;
+
+    }
+
+
+    .common-header-title h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .common-header-title p {
+
+        font-size: 14px;
+
+    }
+
+
+    .common-header-logo {
+
+        width: 62px;
+
+        height: 62px;
+
+        min-width: 62px;
+
+        font-size: 31px;
+
+    }
+
+
+    .common-page {
+
+        padding: 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    :root {
+
+        --common-sidebar-width: 82px;
+
+        --common-header-height: 88px;
+
+    }
+
+
+    .common-header {
+
+        height:
+            var(--common-header-height);
+
+        min-height:
+            var(--common-header-height);
+
+        padding:
+            8px 14px;
+
+    }
+
+
+    .common-header-logo {
+
+        width: 52px;
+
+        height: 52px;
+
+        min-width: 52px;
+
+        font-size: 27px;
+
+    }
+
+
+    .common-header-title h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .common-header-title p,
+    .common-header-title small {
+
+        display: none;
+
+    }
+
+
+    .common-header-clock {
+
+        display: none;
+
+    }
+
+
+    .common-sidebar {
+
+        width:
+            var(--common-sidebar-width);
+
+        min-width:
+            var(--common-sidebar-width);
+
+    }
+
+
+    .common-menu-item {
+
+        justify-content: center;
+
+        padding: 0;
+
+    }
+
+
+    .common-menu-item > span:not(.common-menu-icon) {
+
+        display: none;
+
+    }
+
+
+    .common-sidebar-storage {
+
+        padding:
+            14px 5px;
+
+    }
+
+
+    .common-storage-title,
+    .common-storage-name,
+    .common-storage-used,
+    .common-storage-capacity,
+    .common-storage-free {
+
+        display: none;
+
+    }
+
+
+    .common-storage-circle {
+
+        width: 62px;
+
+        height: 62px;
+
+    }
+
+
+    .common-storage-value {
+
+        font-size: 13px;
+
+    }
+
+
+    .common-sidebar-footer {
+
+        justify-content: center;
+
+        padding-left: 0;
+
+        padding-right: 0;
+
+    }
+
+
+    .common-sidebar-footer span:not(.common-status-dot) {
+
+        display: none;
+
+    }
+
+
+    .common-page {
+
+        padding: 18px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    :root {
+
+        --common-sidebar-width: 64px;
+
+        --common-header-height: 76px;
+
+    }
+
+
+    .common-header {
+
+        padding:
+            7px 10px;
+
+    }
+
+
+    .common-header-logo {
+
+        width: 48px;
+
+        height: 48px;
+
+        min-width: 48px;
+
+        font-size: 24px;
+
+        border-radius: 9px;
+
+    }
+
+
+    .common-header-title h1 {
+
+        font-size: 19px;
+
+    }
+
+
+    .common-header-actions {
+
+        gap: 5px;
+
+    }
+
+
+    .common-btn-start,
+    .common-btn-stop {
+
+        min-width: 68px;
+
+        height: 34px;
+
+        padding:
+            0 7px;
+
+        font-size: 9px;
+
+    }
+
+
+    .common-sidebar {
+
+        width:
+            var(--common-sidebar-width);
+
+        min-width:
+            var(--common-sidebar-width);
+
+    }
+
+
+    .common-menu-item {
+
+        height: 56px;
+
+        min-height: 56px;
+
+    }
+
+
+    .common-menu-icon {
+
+        width: 28px;
+
+        min-width: 28px;
+
+    }
+
+
+    .common-page {
+
+        padding: 12px;
+
+    }
+
+
+    .common-page-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .common-card-body {
+
+        padding: 13px;
+
+    }
+
+
+    .common-bottom-bar {
+
+        flex-wrap: wrap;
+
+        padding:
+            7px 9px;
+
+    }
+
+}

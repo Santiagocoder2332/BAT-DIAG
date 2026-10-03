@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        BAT-DIAG | Monitoreo
+    </title>
+
+
+    <!-- =====================================================
+         CSS COMÚN DE LAS SUBPÁGINAS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/common.css"
+    >
+
+
+    <!-- =====================================================
+         CSS ESPECÍFICO DE MONITOREO
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/monitoreo.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         APLICACIÓN COMPLETA
+    ====================================================== -->
+
+    <div class="common-app">
+
+
+        <!-- =================================================
+             HEADER GLOBAL
+        ================================================== -->
+
+        <header class="common-header">
+
+
+            <!-- =================================================
+                 MARCA
+            ================================================== -->
+
+            <div class="common-header-brand">
+
+
+                <!-- LOGO -->
+
+                <div class="common-header-logo">
+
+                    ⚡
+
+                </div>
+
+
+                <!-- TEXTO DE MARCA -->
+
+                <div class="common-header-title">
+
+                    <h1>
+                        BAT-<span>DIAG</span>
+                    </h1>
+
+                    <p>
+                        Diagnóstico de Baterías de Segunda Vida
+                    </p>
+
+                    <small>
+                        Sistema electrónico para monitoreo y análisis
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACCIONES DEL HEADER
+            ================================================== -->
+
+            <div class="common-header-actions">
+
+
+                <!-- RELOJ -->
+
+                <div class="common-header-clock">
+
+                    <strong>
+                        10:35:42 AM
+                    </strong>
+
+                    <span>
+                        15/05/2025
+                    </span>
+
+                </div>
+
+
+                <!-- BOTÓN INICIAR -->
+
+                <button
+                    class="common-btn-start"
+                    type="button"
+                >
+
+                    ▶
+
+                    INICIAR
+
+                </button>
+
+
+                <!-- BOTÓN DETENER -->
+
+                <button
+                    class="common-btn-stop"
+                    type="button"
+                >
+
+                    ■
+
+                    DETENER
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CUERPO
+        ================================================== -->
+
+        <div class="common-body">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+                    <aside class="common-sidebar">
+
+            <nav class="common-sidebar-menu">
+                <a href="../index.html" class="common-menu-item">
+                    <span class="common-menu-icon">⌂</span>
+                    <span>Resumen</span>
+                </a>
+                <a href="monitoreo.html" class="common-menu-item active">
+                    <span class="common-menu-icon">〽</span>
+                    <span>Monitoreo</span>
+                </a>
+                <a href="diagnostico.html" class="common-menu-item">
+                    <span class="common-menu-icon">⚡</span>
+                    <span>Diagnóstico</span>
+                </a>
+                <a href="registros.html" class="common-menu-item">
+                    <span class="common-menu-icon">▤</span>
+                    <span>Registros</span>
+                </a>
+                <a href="configuracion.html" class="common-menu-item">
+                    <span class="common-menu-icon">⚙</span>
+                    <span>Configuración</span>
+                </a>
+                <a href="cuenta.html" class="common-menu-item">
+                    <span class="common-menu-icon">◉</span>
+                    <span>Cuenta</span>
+                </a>
+            </nav>
+
+            <section class="common-sidebar-storage">
+                <h3 class="common-storage-title">Almacenamiento</h3>
+
+                <strong class="common-storage-name">E: — BAT-DIAG</strong>
+
+                <div class="common-storage-circle" aria-label="43.8 por ciento ocupado">
+                    <svg class="common-storage-ring" viewBox="0 0 120 120" aria-hidden="true">
+                        <circle class="common-storage-ring-background" cx="60" cy="60" r="48"></circle>
+                        <circle class="common-storage-ring-progress" cx="60" cy="60" r="48" style="stroke-dashoffset: 169.49;"></circle>
+                    </svg>
+                    <span class="common-storage-value">43.8%</span>
+                </div>
+
+                <div class="common-storage-used">43.8% ocupado</div>
+                <div class="common-storage-capacity">28.0 GB / 64.0 GB</div>
+                <div class="common-storage-free">56.3% libre</div>
+            </section>
+
+            <div class="common-sidebar-footer">
+                <span class="common-status-dot"></span>
+                <span>Sistema en ejecución</span>
+            </div>
+
+        </aside>
+
+
+
+            <!-- =================================================
+                 CONTENIDO PRINCIPAL
+            ================================================== -->
+
+            <main class="common-main">
+
+
+                <div class="common-page monitoring-page">
+
+
+                    <!-- =================================================
+                         CABECERA DE MONITOREO
+                    ================================================== -->
+
+                    <section class="monitor-header">
+
+
+                        <div>
+
+                            <h2>
+                                Monitoreo en tiempo real
+                            </h2>
+
+                            <p>
+                                Visualización del comportamiento
+                                de las variables durante la prueba.
+                            </p>
+
+                        </div>
+
+
+                        <div class="acquisition-status">
+
+                            <span class="status-dot"></span>
+
+                            <div>
+
+                                <strong>
+                                    Adquisición activa
+                                </strong>
+
+                                <small>
+                                    Actualización cada 1 s
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         VALORES ACTUALES
+                    ================================================== -->
+
+                    <section class="monitor-values">
+
+
+                        <!-- =================================================
+                             VOLTAJE
+                        ================================================== -->
+
+                        <article
+                            class="monitor-value voltage-card"
+                        >
+
+                            <div class="value-icon">
+                                V
+                            </div>
+
+
+                            <div class="value-info">
+
+                                <span>
+                                    Voltaje
+                                </span>
+
+                                <strong id="voltage-value">
+                                    12.31 V
+                                </strong>
+
+                                <small>
+                                    Sensor INA219
+                                </small>
+
+                            </div>
+
+
+                            <div class="sensor-state">
+                                ●
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =================================================
+                             CORRIENTE
+                        ================================================== -->
+
+                        <article
+                            class="monitor-value current-card"
+                        >
+
+                            <div class="value-icon">
+                                A
+                            </div>
+
+
+                            <div class="value-info">
+
+                                <span>
+                                    Corriente
+                                </span>
+
+                                <strong id="current-value">
+                                    -3.48 A
+                                </strong>
+
+                                <small>
+                                    Sensor INA219
+                                </small>
+
+                            </div>
+
+
+                            <div class="sensor-state">
+                                ●
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =================================================
+                             TEMPERATURA BATERÍA
+                        ================================================== -->
+
+                        <article
+                            class="monitor-value battery-temp-card"
+                        >
+
+                            <div class="value-icon">
+                                °C
+                            </div>
+
+
+                            <div class="value-info">
+
+                                <span>
+                                    Temperatura batería
+                                </span>
+
+                                <strong
+                                    id="battery-temperature-value"
+                                >
+                                    33.7 °C
+                                </strong>
+
+                                <small>
+                                    Sensor DS18B20
+                                </small>
+
+                            </div>
+
+
+                            <div class="sensor-state">
+                                ●
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =================================================
+                             TEMPERATURA AMBIENTE
+                        ================================================== -->
+
+                        <article
+                            class="monitor-value ambient-temp-card"
+                        >
+
+                            <div class="value-icon">
+                                °C
+                            </div>
+
+
+                            <div class="value-info">
+
+                                <span>
+                                    Temperatura ambiente
+                                </span>
+
+                                <strong
+                                    id="ambient-temperature-value"
+                                >
+                                    27.4 °C
+                                </strong>
+
+                                <small>
+                                    Sensor DHT22
+                                </small>
+
+                            </div>
+
+
+                            <div class="sensor-state">
+                                ●
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =================================================
+                             HUMEDAD
+                        ================================================== -->
+
+                        <article
+                            class="monitor-value humidity-card"
+                        >
+
+                            <div class="value-icon">
+                                %
+                            </div>
+
+
+                            <div class="value-info">
+
+                                <span>
+                                    Humedad relativa
+                                </span>
+
+                                <strong id="humidity-value">
+                                    62.3 %
+                                </strong>
+
+                                <small>
+                                    Sensor DHT22
+                                </small>
+
+                            </div>
+
+
+                            <div class="sensor-state">
+                                ●
+                            </div>
+
+                        </article>
+
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         GRÁFICAS
+                    ================================================== -->
+
+                    <section class="monitor-charts">
+
+
+                        <!-- =================================================
+                             GRÁFICA DE VOLTAJE
+                        ================================================== -->
+
+                        <article class="monitor-chart" data-variable="voltaje">
+
+
+                            <div class="chart-header">
+
+                                <div>
+
+                                    <span
+                                        class="chart-icon voltage-icon"
+                                    >
+                                        V
+                                    </span>
+
+
+                                    <div>
+
+                                        <h3>
+                                            Voltaje
+                                        </h3>
+
+                                        <small>
+                                            Comportamiento durante
+                                            la prueba
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <strong
+                                    class="chart-current"
+                                    id="voltaje-chart-value"
+                                >
+                                    12.31 V
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="chart">
+
+
+                                <div class="chart-y-axis">
+
+                                    <span>
+                                        13.5
+                                    </span>
+
+                                    <span>
+                                        13.0
+                                    </span>
+
+                                    <span>
+                                        12.5
+                                    </span>
+
+                                    <span>
+                                        12.0
+                                    </span>
+
+                                    <span>
+                                        11.5
+                                    </span>
+
+                                </div>
+
+
+                                <div class="chart-area">
+
+                                    <div class="monitor-dynamic-chart"></div>
+
+                                    
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="chart-x-axis">
+
+                                <span>0</span>
+                                <span>30</span>
+                                <span>60</span>
+                                <span>90</span>
+                                <span>120</span>
+                                <span>136 min</span>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- =================================================
+                             GRÁFICA DE CORRIENTE
+                        ================================================== -->
+
+                        <article class="monitor-chart" data-variable="corriente">
+
+
+                            <div class="chart-header">
+
+                                <div>
+
+                                    <span
+                                        class="chart-icon current-icon"
+                                    >
+                                        A
+                                    </span>
+
+
+                                    <div>
+
+                                        <h3>
+                                            Corriente
+                                        </h3>
+
+                                        <small>
+                                            Corriente de descarga
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <strong
+                                    class="chart-current current-value"
+                                >
+                                    -3.48 A
+                                </strong>
+
+                            </div>
+
+
+                            <div class="chart">
+
+
+                                <div class="chart-y-axis">
+
+                                    <span>0</span>
+                                    <span>-1</span>
+                                    <span>-2</span>
+                                    <span>-3</span>
+                                    <span>-4</span>
+
+                                </div>
+
+
+                                <div class="chart-area">
+
+                                    <div class="monitor-dynamic-chart"></div>
+
+                                    
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="chart-x-axis">
+
+                                <span>0</span>
+                                <span>30</span>
+                                <span>60</span>
+                                <span>90</span>
+                                <span>120</span>
+                                <span>136 min</span>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- =================================================
+                             GRÁFICA TEMPERATURA BATERÍA
+                        ================================================== -->
+
+                        <article class="monitor-chart" data-variable="tempBateria">
+
+
+                            <div class="chart-header">
+
+                                <div>
+
+                                    <span
+                                        class="chart-icon battery-temp-icon"
+                                    >
+                                        °C
+                                    </span>
+
+
+                                    <div>
+
+                                        <h3>
+                                            Temperatura batería
+                                        </h3>
+
+                                        <small>
+                                            Evolución térmica
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <strong
+                                    class="chart-current temperature-value"
+                                >
+                                    33.7 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="chart">
+
+
+                                <div class="chart-y-axis">
+
+                                    <span>36</span>
+                                    <span>34</span>
+                                    <span>32</span>
+                                    <span>30</span>
+                                    <span>28</span>
+
+                                </div>
+
+
+                                <div class="chart-area">
+
+                                    <div class="monitor-dynamic-chart"></div>
+
+                                    
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="chart-x-axis">
+
+                                <span>0</span>
+                                <span>30</span>
+                                <span>60</span>
+                                <span>90</span>
+                                <span>120</span>
+                                <span>136 min</span>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- =================================================
+                             GRÁFICA TEMPERATURA AMBIENTE
+                        ================================================== -->
+
+                        <article class="monitor-chart" data-variable="tempAmbiente">
+
+
+                            <div class="chart-header">
+
+                                <div>
+
+                                    <span
+                                        class="chart-icon ambient-icon"
+                                    >
+                                        °C
+                                    </span>
+
+
+                                    <div>
+
+                                        <h3>
+                                            Temperatura ambiente
+                                        </h3>
+
+                                        <small>
+                                            Temperatura del entorno
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <strong
+                                    class="chart-current ambient-value"
+                                >
+                                    27.4 °C
+                                </strong>
+
+                            </div>
+
+
+                            <div class="chart">
+
+
+                                <div class="chart-y-axis">
+
+                                    <span>30</span>
+                                    <span>29</span>
+                                    <span>28</span>
+                                    <span>27</span>
+                                    <span>26</span>
+
+                                </div>
+
+
+                                <div class="chart-area">
+
+                                    <div class="monitor-dynamic-chart"></div>
+
+                                    
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="chart-x-axis">
+
+                                <span>0</span>
+                                <span>30</span>
+                                <span>60</span>
+                                <span>90</span>
+                                <span>120</span>
+                                <span>136 min</span>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- =================================================
+                             GRÁFICA HUMEDAD
+                        ================================================== -->
+
+                        <article
+                            class="monitor-chart humidity-chart"
+                            data-variable="humedad"
+                        >
+
+
+                            <div class="chart-header">
+
+                                <div>
+
+                                    <span
+                                        class="chart-icon humidity-icon"
+                                    >
+                                        %
+                                    </span>
+
+
+                                    <div>
+
+                                        <h3>
+                                            Humedad relativa
+                                        </h3>
+
+                                        <small>
+                                            Humedad ambiental
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <strong
+                                    class="chart-current humidity-value"
+                                >
+                                    62.3 %
+                                </strong>
+
+                            </div>
+
+
+                            <div class="chart">
+
+
+                                <div class="chart-y-axis">
+
+                                    <span>70</span>
+                                    <span>65</span>
+                                    <span>60</span>
+                                    <span>55</span>
+                                    <span>50</span>
+
+                                </div>
+
+
+                                <div class="chart-area">
+
+                                    <div class="monitor-dynamic-chart"></div>
+
+                                    
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="chart-x-axis">
+
+                                <span>0</span>
+                                <span>30</span>
+                                <span>60</span>
+                                <span>90</span>
+                                <span>120</span>
+                                <span>136 min</span>
+
+                            </div>
+
+
+                        </article>
+
+
+                    </section>
+
+
+                </div>
+
+            </main>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CONTROLADOR PRINCIPAL
+         
+         IMPORTANTE:
+         Este archivo utiliza sessionStorage/csvRows
+         y actualiza los elementos mediante sus IDs.
+    ====================================================== -->
+
+<!-- =====================================================
+         CONTROLADOR DE MONITOREO
+    ====================================================== -->
+
+    <script
+        src="../js/monitoreo.js"
+    ></script>
+
+
+</body>
+
+</html>
